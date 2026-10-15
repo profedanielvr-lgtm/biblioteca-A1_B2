@@ -1,0 +1,10 @@
+node_modules/
+runtime-data/
+*.sqlite*
+.env
+coverage/
+source-shell.html
+legacy/
+media/
+catalog.json
+new-foundations.json

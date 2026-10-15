@@ -1,0 +1,12 @@
+(function(root){'use strict';
+const rates={A1:.8,A2:.85,B1:1,B2:1};
+class ClipPlayer{
+ constructor({clip,ledger,key,audio,onStatus=()=>{},onCount=()=>{}}){this.clip=clip;this.ledger=ledger;this.key=key;this.audio=audio||new Audio();this.status=onStatus;this.count=onCount;this.busy=false;this.speed=rates[clip.level]||.85;this.audio.preload='auto';this.audio.src=clip.offlineAudio||clip.url;this.audio.preservesPitch=true;this.stopAt=Number.isFinite(clip.trimEnd)&&clip.trimEnd>0?clip.trimEnd:Infinity;this.tick=()=>{if(this.audio.currentTime>=this.stopAt)this.stop();};this.audio.addEventListener('timeupdate',this.tick);this.audio.addEventListener('ended',()=>this.stop());this.timer=null;}
+ async ready(){if(this.audio.readyState>=1)return;await new Promise((ok,no)=>{let timeout;const clean=()=>{clearTimeout(timeout);this.audio.removeEventListener('loadedmetadata',good);this.audio.removeEventListener('error',bad);};const good=()=>{clean();ok();},bad=()=>{clean();no(Error('No se pudo cargar el audio. / Audio kon niet worden geladen.'));};this.audio.addEventListener('loadedmetadata',good,{once:true});this.audio.addEventListener('error',bad,{once:true});timeout=setTimeout(bad,15000);this.audio.load();});}
+ setSpeed(value){const v=Number(value);if(!Number.isFinite(v)||v<.65||v>1.25)throw Error('Velocidad no válida');this.speed=v;this.audio.playbackRate=v;}
+ async play(){if(this.busy)return;this.busy=true;let token;try{await this.ready();const start=Math.max(0,(Number(this.clip.trimStart)||0)-(Number(this.clip.leadIn)||0));if(start>=this.audio.duration||this.stopAt<=start)throw Error('Revisa los puntos de recorte / Controleer de knippunten');this.audio.currentTime=start;this.audio.playbackRate=this.speed;token=await this.ledger.reservePlay(this.key);await this.audio.play();this.timer=setInterval(this.tick,20);this.count(await this.ledger.usedPlays(this.key));this.status('playing');}catch(e){this.busy=false;if(token)await this.ledger.refundPlay(this.key,token);this.status('error',e.message);throw e;}}
+ stop(){this.audio.pause();clearInterval(this.timer);this.timer=null;this.busy=false;this.status('stopped');}
+ destroy(){this.stop();this.audio.removeEventListener('timeupdate',this.tick);this.audio.removeAttribute?.('src');this.audio.load?.();}
+}
+root.BiblioAudio={ClipPlayer,rates};if(typeof module!=='undefined')module.exports=root.BiblioAudio;
+})(typeof window!=='undefined'?window:globalThis);

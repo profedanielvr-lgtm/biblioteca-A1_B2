@@ -1,0 +1,17 @@
+services:
+  biblioteca-api:
+    build:
+      context: ..
+      dockerfile: server/Dockerfile
+    restart: unless-stopped
+    environment:
+      BIBLIO_SECRET: ${BIBLIO_SECRET:?Configure a random secret of at least 32 characters}
+      BIBLIO_TEACHER_PASSWORD: ${BIBLIO_TEACHER_PASSWORD:?Configure a password of at least 12 characters}
+      BIBLIO_ALLOWED_ORIGIN: https://profedanielvr-lgtm.github.io
+      BIBLIO_DATA_DIR: /data
+    volumes:
+      - biblioteca-data:/data
+    ports:
+      - "127.0.0.1:3000:3000"
+volumes:
+  biblioteca-data:

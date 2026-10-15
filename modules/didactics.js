@@ -1,0 +1,1 @@
+window.Didactics={activities:c=>c.activities,depth:c=>c.depth,context:c=>c.context,hasSpecific:c=>!!c.depth};
