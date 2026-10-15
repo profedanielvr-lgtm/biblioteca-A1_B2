@@ -6,7 +6,7 @@ Gramática española y didáctica para docentes en formación y en ejercicio del
 
 ## Usar la biblioteca
 
-Abre `index.html` desde GitHub Pages o un servidor estático conservando las carpetas. Para usarla sin servidor, abre `La-Biblioteca.html`, que contiene estilos, datos, código, fuente y cinco audios. El archivo descargado no necesita cuenta de ChatGPT. Se incluye un ZIP comprobado en `downloads/La-Biblioteca.zip`.
+Abre `index.html` desde GitHub Pages o un servidor estático conservando las carpetas. Para usarla sin servidor, abre `La-Biblioteca.html`, que contiene estilos, datos, código, fuente y once audios. El archivo descargado no necesita cuenta de ChatGPT. Se incluye un ZIP comprobado en `downloads/La-Biblioteca.zip`.
 
 El índice A–D enlaza fonética/ortografía, morfología, verbos y sintaxis. Cada ficha conserva el recorrido explicación, puente ES/NL, muestra real, Docentenbril, fuentes y práctica. La práctica rápida de una ficha no crea por sí sola un registro: para conservar un intento, usa **Practicar esta ficha y guardar un intento**.
 
@@ -42,9 +42,9 @@ El panel del profesor muestra los registros de ese navegador. Para ver los de ot
 
 ## Audios y fonética
 
-Cinco grabaciones humanas con metadatos de tres locutores: Arca (Lima), 1ucian0 (Argentina; categoría rioplatense en Commons) y Haylli (español europeo). El lugar pronunciado no determina el acento del locutor. Se conservan autor, licencia, procedencia y URL. El audio está incluido en el catálogo para evitar errores de red al cargarlo.
+Once grabaciones humanas: cinco nombres propios A1 y seis microtareas de escucha A2–B2. Participan cuatro locutores de procedencia documentada. Las nuevas tareas trabajan frecuencia, transporte, causa, atribución y alcance de ejemplos. La etiqueta corresponde a la demanda de la pregunta; no son pruebas integrales ni certificaciones de nivel. Véase `docs/LISTENING-SOURCES.md` para fuentes y licencias de audio/texto.
 
-Son nombres propios, útiles para una introducción A1; no constituyen un banco de escucha B1/B2. Se han comprobado archivo Ogg y duración mediante ffprobe, no la calidad auditiva ni los rasgos dialectales mediante escucha humana. Las tareas no exigen identificar un acento por una palabra aislada.
+Se han verificado los metadatos, duraciones y decodificación de los archivos con ffmpeg/ffprobe. No se ha realizado escucha humana ni una validación auditiva de rasgos dialectales. Los audios A1 no piden identificar un acento por una palabra aislada. El docente debe escuchar el material antes de una prueba de clase.
 
 El reproductor espera los metadatos antes de situar el inicio. La configuración inicial reproduce el archivo completo; no añade lecturas de instrucciones ni presentaciones de locutores. Para material nuevo, el profesor fija inicio/final y margen previo, y lo prueba antes de publicar. El recorte se realiza en reproducción, sin modificar el archivo original. Los recortes para una pregunta deben coincidir con su transcripción y sus pistas.
 
@@ -54,20 +54,22 @@ Velocidades iniciales: A1 0,80×, A2 0,85×, B1 1,00× y B2 1,00×. El control m
 
 Las muestras reales y sus traducciones se consultan dentro de la ficha. Las fuentes y materiales abren un diálogo interno. YouTube se transforma en un iframe `youtube-nocookie`; imágenes y PDF se cargan en el diálogo. El contenido externo se solicita al pulsar **Cargar original aquí**.
 
-Un editor externo puede bloquear el iframe mediante CSP o X-Frame-Options. La aplicación no intenta saltarse esa restricción ni copiar publicaciones completas: mantiene el fragmento seleccionado, la traducción, el contexto y la referencia. Una URL accesible no garantiza permiso de incrustación. Las licencias de las cinco grabaciones y las citas breves se conservan; los ejemplos creados están etiquetados como tales.
+Un editor externo puede bloquear el iframe mediante CSP o X-Frame-Options. La aplicación no intenta saltarse esa restricción ni copiar publicaciones completas: mantiene el fragmento seleccionado, la traducción, el contexto y la referencia. Una URL accesible no garantiza permiso de incrustación. Las licencias de las grabaciones y las citas breves se conservan; los ejemplos creados están etiquetados como tales.
 
-## Activar el servidor compartido
+## Servidor compartido publicado
 
-El código está en `server/server.mjs`: Node 24 y SQLite, sin paquetes de producción externos. **No está activado por subirlo a GitHub Pages**. Requiere un alojamiento de Fontys u otro servidor con almacenamiento persistente y HTTPS. No se dispone en esta entrega de acceso administrativo a ese alojamiento.
+La conexión pública ya está incluida en `content/config.js`. El alumnado no necesita cuenta de ChatGPT para consultar, practicar ni sincronizar con código y PIN activo.
 
-1. Configura `BIBLIO_SECRET` con al menos 32 caracteres aleatorios, `BIBLIO_TEACHER_PASSWORD` con al menos 12, `BIBLIO_DATA_DIR` en un directorio persistente fuera de la publicación web y `BIBLIO_ALLOWED_ORIGIN` con el origen exacto del frontend.
-2. Ejecuta `node server/server.mjs` detrás de HTTPS. Opcionalmente utiliza `server/compose.yaml`; el volumen `biblioteca-data` debe conservarse entre despliegues. Nunca uses una orden que elimine ese volumen para actualizar la app.
-3. Comprueba `GET /health`. En **Panel del profesor** introduce la API HTTPS y guarda la conexión. Entra con la contraseña del servidor y activa un PIN nuevo. La sesión docente dura 30 minutos; el PIN de clase 24 horas.
-4. Para que el alumnado tenga la conexión sin configurarla en cada navegador, escribe la API pública en `content/config.js` o guarda la conexión y exporta el HTML desde el editor. La configuración exportada contiene únicamente la URL pública, no contraseñas ni tokens.
-5. Con el servidor conectado, los intentos con PIN válido se guardan primero en el navegador y se envían al servidor. Si falla la sincronización, se informa y se ofrece reintentar; la copia local se conserva. La sincronización requiere conexión y una sesión válida.
-6. Conserva copias del directorio persistente y exportaciones de historial. Al actualizar, sustituye código y contenido, no el directorio de datos. La API conserva intentos entre reinicios y entre versiones de contenido.
+1. El propietario abre https://gramatica-a2-ele-fontys.daniel-vr.chatgpt.site/gestion y elige una contraseña docente de al menos 12 caracteres. Solo esta configuración inicial requiere su cuenta de propietario.
+2. En **Panel del profesor**, entra con esa contraseña y activa un PIN nuevo para el grupo. El PIN dura 24 horas y la sesión 30 minutos.
+3. El estudiante usa siempre el mismo código y el PIN activo al iniciar el intento. Sin PIN, la práctica se conserva solo en el navegador. Para recuperar el historial del servidor, introduce código y PIN activo en **Mi historial**; también aparecerán intentos de PIN anteriores.
+4. Para editar, prepara los cambios en **Panel de editores** y usa **Publicar copia editorial en el servidor** desde el panel docente. Cada publicación crea una versión y conserva los intentos.
 
-La API autentica al profesor; limita solicitudes de acceso y usa sesiones firmadas. Los estudiantes acceden con código y PIN activo. Un alumno autenticado con ese esquema puede consultar los registros de su código; conocer el código ajeno y un PIN válido permitiría suplantarlo. Para identidad fuerte, sustituye esta entrada por SSO de Fontys antes de usar datos identificables o evaluación acreditativa.
+El servicio usa D1 para registros y R2 para versiones de contenido y copias de intentos. El código está en `server/cloud/`; la publicación y secretos se gestionan en el alojamiento. No sustituir secretos ni eliminar bases/objetos al actualizar. Los triggers impiden sobrescribir o borrar intentos por las rutas de la aplicación.
+
+La alternativa autogestionada sigue disponible en `server/server.mjs` (Node 24 + SQLite) y `server/compose.yaml`. Necesita almacenamiento persistente, HTTPS y variables `BIBLIO_SECRET`, `BIBLIO_TEACHER_PASSWORD`, `BIBLIO_DATA_DIR` y `BIBLIO_ALLOWED_ORIGIN`.
+
+El código y el PIN agrupan actividad formativa; no equivalen a identidad institucional comprobada ni a evaluación acreditativa. La aplicación no escribe notas en Canvas.
 
 ## Arquitectura y desarrollo
 
@@ -81,6 +83,6 @@ Para comprobar el código, `npm install` y `npm test`. Las dependencias de desar
 
 ## Verificación de esta entrega
 
-Se prueban las 123 fichas en ambos idiomas mediante DOM simulado, la validación del catálogo, el editor y su exportación autocontenida, IndexedDB simulado con concurrencia, dos escuchas y devolución de reservas fallidas, historiales con distintos PIN y API real con SQLite, autenticación, conflictos y reinicio. No se ha realizado QA visual en navegador real, escucha humana ni despliegue del backend en producción. La compilación de GitHub Pages se comprueba por separado.
+Se prueban las 123 fichas en ambos idiomas mediante DOM simulado, la validación del catálogo, el editor y su exportación autocontenida, IndexedDB simulado con concurrencia, dos escuchas y devolución de reservas fallidas, historiales con distintos PIN y API real con SQLite, autenticación, conflictos y reinicio. No se ha realizado QA visual en navegador real ni escucha humana. El backend está desplegado en producción; se ha comprobado el acceso anónimo al servicio y la existencia de las tablas migradas. La compilación de GitHub Pages se comprueba por separado.
 
 La Biblioteca — Herramienta educativa sin fines lucrativos creada por Daniel Valle Robles.

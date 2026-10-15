@@ -1,6 +1,6 @@
 # Arquitectura funcional de La Biblioteca
 
-El frontend es estático, sin dependencias de producción. Se puede alojar en GitHub Pages, en un servidor del centro o abrir como HTML autocontenido. La API Node/SQLite es una capa opcional para compartir datos y publicación editorial; no necesita ejecutarse para consultar las fichas.
+El frontend es estático, sin dependencias de producción. Se puede alojar en GitHub Pages, en un servidor del centro o abrir como HTML autocontenido. La API compartida ya está publicada con D1/R2 para historial y publicación editorial. También se ofrece una alternativa Node/SQLite autogestionada. La consulta de fichas funciona con la copia estática incluso si falla la API.
 
 ## Flujo de consulta y aprendizaje
 
@@ -53,7 +53,7 @@ BiblioMedia.open({
 
 Local: base `la-biblioteca-records`, esquema 1, almacenes `attempts`, `plays`, `drafts`, `media`, `metadata`. Solo `attempts` y `plays` tienen uso activo en esta entrega; los otros reservan la evolución sin borrar datos. Se mantiene una copia JSON de intentos con otra clave estable. Los borradores editoriales no comparten almacén ni clave con los intentos.
 
-Servidor: `attempts` es una tabla de inserción única protegida contra UPDATE/DELETE. `classes` conserva la relación con cada PIN histórico. `content_versions` permite cambiar contenidos sin tocar intentos. El inicio de una nueva versión del servidor usa CREATE IF NOT EXISTS sobre el mismo archivo, no una recreación de datos.
+Servidor: `attempts` es una tabla de inserción única protegida contra UPDATE/DELETE. `classes` conserva la relación con cada PIN histórico. `content_versions` permite cambiar contenidos sin tocar intentos. La versión publicada usa migraciones Drizzle sobre D1, sin recrear datos. R2 almacena versiones grandes de catálogo y copias de intentos. La alternativa Node usa CREATE IF NOT EXISTS sobre el mismo archivo persistente.
 
 El código del estudiante se normaliza y no cambia al cambiar de PIN. El identificador de intento es UUID. Las copias se importan por UUID, se ignoran duplicados equivalentes y se rechazan conflictos; no se sobrescribe un historial completo desde un archivo de configuración.
 
@@ -64,6 +64,7 @@ La autenticación docente es una contraseña verificada en servidor con sesiones
 | Ruta | Acceso | Función |
 |---|---|---|
 | GET /health | público | Estado del servicio |
+| POST /teacher/setup | solo propietario autenticado | Elegir/renovar contraseña docente |
 | POST /teacher/session | contraseña docente | Sesión de 30 minutos |
 | POST /classes | docente | PIN nuevo de 24 horas |
 | POST /student/session | código y PIN válido | Sesión de estudiante |
