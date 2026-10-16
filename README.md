@@ -141,3 +141,8 @@ La Biblioteca — Herramienta educativa sin fines lucrativos creada por Daniel V
 ## Interfaz y práctica, octubre de 2026
 
 La navegación lateral usa un solo contenedor sticky; el logo de la formación aparece arriba a la derecha. La brújula de la ruta identifica el siguiente tema o prueba según el progreso guardado. Práctica intensiva permite filtrar por nivel, familia y tema, con cinco modalidades y repaso de errores. El catálogo contiene 1.722 ejercicios editables; los recuentos por modalidad se solapan. Consulta docs/PRACTICA-Y-NAVEGACION.md para el alcance, las referencias y la edición.
+
+
+## Historial sin PIN y progreso por bloque
+
+Mi perfil permite entrar con número de estudiante. El historial personal reúne respuestas de fichas, entrenadores y pruebas con puntuación, detalle y evolución, sin PIN. Se conserva en este navegador y en las copias del perfil; no es una cuenta Fontys verificada ni sincronización automática entre dispositivos. La barra vertical cuenta estudio, práctica y prueba aprobada. Consulta docs/PERFILES-Y-PROGRESO.md.
