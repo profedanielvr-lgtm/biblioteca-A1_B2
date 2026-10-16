@@ -136,3 +136,8 @@ Para comprobar el código, `npm install` y `npm test`. Las dependencias de desar
 Se prueban las 123 fichas en ambos idiomas mediante DOM simulado, la validación del catálogo, el editor y su exportación autocontenida, IndexedDB simulado con concurrencia, dos escuchas y devolución de reservas fallidas, historiales con distintos PIN y API real con SQLite, autenticación, conflictos y reinicio. No se ha realizado QA visual en navegador real ni escucha humana. El backend está desplegado en producción; se ha comprobado el acceso anónimo al servicio y la existencia de las tablas migradas. La compilación de GitHub Pages se comprueba por separado.
 
 La Biblioteca — Herramienta educativa sin fines lucrativos creada por Daniel Valle Robles.
+
+
+## Interfaz y práctica, octubre de 2026
+
+La navegación lateral usa un solo contenedor sticky; el logo de la formación aparece arriba a la derecha. La brújula de la ruta identifica el siguiente tema o prueba según el progreso guardado. Práctica intensiva permite filtrar por nivel, familia y tema, con cinco modalidades y repaso de errores. El catálogo contiene 1.722 ejercicios editables; los recuentos por modalidad se solapan. Consulta docs/PRACTICA-Y-NAVEGACION.md para el alcance, las referencias y la edición.

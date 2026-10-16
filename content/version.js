@@ -1,1 +1,1 @@
-window.BIBLIO_BUILD = {"id": "2026.10.16-studio", "builtAt": "2026-10-16T10:18:27+00:00"};
+window.BIBLIO_BUILD = {"id": "2026.10.16-practice", "builtAt": "2026-10-16T10:39:19+00:00"};
