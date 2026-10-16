@@ -1,0 +1,1 @@
+window.BIBLIO_BUILD = {"id": "2026.10.16-visual", "builtAt": "2026-10-16T08:53:41+00:00"};

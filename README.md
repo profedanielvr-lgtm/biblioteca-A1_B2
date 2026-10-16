@@ -10,6 +10,16 @@ Abre `index.html` desde GitHub Pages o un servidor estático conservando las car
 
 El índice A–D enlaza fonética/ortografía, morfología, verbos y sintaxis. Cada ficha conserva el recorrido explicación, puente ES/NL, muestra real, Docentenbril, fuentes y práctica. La práctica rápida de una ficha no crea por sí sola un registro: para conservar un intento, usa **Practicar esta ficha y guardar un intento**.
 
+## Lectura visual y última sesión
+
+Al volver sin un enlace de ficha explícito se recupera la última ficha, sección y posición de lectura de este navegador. Los enlaces directos tienen prioridad. El índice sigue accesible desde la marca o el menú. Se conservan las respuestas de práctica rápida y los acordeones abiertos; los PIN y contraseñas no forman parte de esta memoria. Los intentos de evaluación y su historial conservan su almacenamiento separado. Borrar datos del navegador elimina esta preferencia local.
+
+Cada ficha incluye un mapa visual, ejemplos seleccionables, teoría desplegable y un espacio para ilustración. Ser/estar, gustar, cambios vocálicos y contraste de pasados tienen esquemas propios. Las demás fichas conectan la regla principal, un ejemplo y la mnemotecnia propia del tema. La explicación completa sigue disponible debajo.
+
+Para añadir una ilustración: **Panel de editores → Materiales y enlaces → Ilustración de la teoría**. Introduce URL HTTPS, texto alternativo en ES/NL y pie de imagen. Usa imágenes con permiso y una dirección de archivo accesible al alumnado. Guarda y publica la copia docente. Si falla la imagen, se conserva la teoría y aparece una alternativa textual.
+
+El footer muestra la fecha/hora de compilación de `content/version.js`, en Europe/Amsterdam y con segundos. No muestra la hora de visita. `build.py` crea ese sello al preparar cada versión. Las revisiones del catálogo compartido no cambian la fecha del código de la aplicación.
+
 ## Marco curricular
 
 El MCER describe capacidades comunicativas; no prescribe una lista única de gramática española. El PCIC concreta inventarios por niveles y permite situar el uso trabajado. La Kennisbasis 2026 de la documentación facilitada orienta el análisis y la didáctica del futuro profesor. No se atribuye a estos documentos una certificación de la plataforma.

@@ -78,3 +78,11 @@ La autenticación docente es una contraseña verificada en servidor con sesiones
 ## Comprobaciones y límites
 
 Las pruebas ejecutan el DOM con linkedom y IndexedDB con fake-indexeddb, no un navegador real. El servidor se prueba mediante HTTP real y una base SQLite temporal, incluyendo reinicio. La verificación de formato/duración de audio no sustituye una escucha. Las restricciones de iframe de terceros, el almacenamiento en Student View y la apariencia móvil requieren comprobación en el entorno de Fontys.
+
+## Navegación y presentación visual
+
+`reading-state.js` valida destinos internos y conserva lectura/práctica en una clave independiente de los exámenes. Solo restaura en el arranque y sin enlace explícito. Navegar al índice nunca vuelve a ejecutar la restauración. Los cambios de sección de una misma ficha desplazan el foco visual sin reconstruir los controles.
+
+`visual-learning.js` compone esquemas, ejemplos interactivos y un slot opcional `illustration: {url, alt: {es,nl}, caption: {es,nl}}`. La teoría completa se conserva en acordeones nativos. URLs HTTPS y textos alternativos se validan antes de publicar.
+
+El contenido remoto emite `biblio:content-ready`, no un hashchange artificial. Solo se solicita una vez por carga, con timeout de 10 s; no reemplaza la pantalla de un intento activo ni el editor. Sin servidor disponible, la consulta local sigue operativa. `content/version.js` es independiente del catálogo y fija el sello temporal del código publicado.
