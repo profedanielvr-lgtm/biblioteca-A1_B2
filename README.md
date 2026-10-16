@@ -146,3 +146,8 @@ La navegación lateral usa un solo contenedor sticky; el logo de la formación a
 ## Historial sin PIN y progreso por bloque
 
 Mi perfil permite entrar con número de estudiante. El historial personal reúne respuestas de fichas, entrenadores y pruebas con puntuación, detalle y evolución, sin PIN. Se conserva en este navegador y en las copias del perfil; no es una cuenta Fontys verificada ni sincronización automática entre dispositivos. La barra vertical cuenta estudio, práctica y prueba aprobada. Consulta docs/PERFILES-Y-PROGRESO.md.
+
+
+## Cuenta en la nube y dashboard
+
+La versión cloud visual añade cuentas propias vinculadas al número de estudiante, guardado de perfiles en D1/R2 y restauración en otro navegador al iniciar sesión. No es Fontys SSO. Se conservan los perfiles locales existentes. Mi progreso estima el dominio con criterios explícitos y enlaza práctica focalizada. La teoría añade infografías SVG y un laboratorio de acentuación; el banco contiene 1.738 ejercicios. Lee docs/NUBE-DOMINIO-Y-VISUALES.md para el acceso, la arquitectura activa y los límites de verificación.

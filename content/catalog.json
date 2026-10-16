@@ -35335,8 +35335,16 @@
       "block": 11,
       "p": [
         {
-          "es": "La sílaba fuerte no siempre lleva tilde. Las palabras agudas suelen llevarla si terminan en vocal, n o s; las llanas, si no terminan así. Las esdrújulas siempre llevan tilde: habló, lápiz, teléfonos. Las combinaciones de vocales tienen reglas propias: leído, país.",
-          "nl": "De beklemtoonde lettergreep krijgt niet altijd een accent. Bij klemtoon op de laatste lettergreep komt het meestal bij een klinker, n of s; bij de voorlaatste meestal juist niet bij die uitgangen. Bij de derde van achteren altijd: habló, lápiz, teléfonos. Klinkercombinaties hebben eigen regels: leído, país."
+          "es": "El acento es la fuerza con que pronunciamos una sílaba. La tilde es el signo escrito sobre una vocal: á, é, í, ó, ú. No son lo mismo: reloj tiene una sílaba tónica, pero no lleva tilde. Primero escucha o reconoce la palabra; después comprueba su escritura.",
+          "nl": "Klemtoon is de nadruk op een lettergreep. Een accentteken is het geschreven teken op een klinker: á, é, í, ó, ú. Dat is niet hetzelfde: reloj heeft klemtoon, maar geen accentteken. Luister eerst naar het woord of herken het; controleer daarna de spelling."
+        },
+        {
+          "es": "Sin tilde, en palabras de más de una sílaba con terminaciones simples, el final orienta la lectura. Consonante distinta de n o s: última sílaba, como hablar, ciudad, reloj y escribir. Vocal, n o s: penúltima sílaba, como cantan, holandesa, salen y hablas. Estas pistas no sustituyen las reglas para hiatos, monosílabos o grupos de consonantes.",
+          "nl": "Bij woorden zonder accentteken, met meerdere lettergrepen en een eenvoudige uitgang, helpt het einde. Een medeklinker behalve n of s: klemtoon op de laatste lettergreep, zoals hablar, ciudad, reloj en escribir. Klinker, n of s: op de voorlaatste, zoals cantan, holandesa, salen en hablas. Er zijn extra regels voor klinkerbotsing, eenlettergrepige woorden en medeklinkergroepen."
+        },
+        {
+          "es": "Las agudas llevan tilde si terminan en vocal, n o s no precedidas de otra consonante: volcán, avión. Las llanas llevan tilde si no tienen esos finales simples: lápiz. Las esdrújulas siempre la llevan: kilómetro, teléfono, cápsula, líquido, fábrica, pájaro. En país o río, una í tónica junto a una vocal abierta lleva tilde por la regla del hiato.",
+          "nl": "Woorden met eindklemtoon krijgen een accent bij een klinker, n of s zonder andere medeklinker ervoor: volcán, avión. Bij klemtoon op de voorlaatste lettergreep komt het accent juist bij andere uitgangen: lápiz. Klemtoon op de derde van achteren krijgt altijd een accent: kilómetro, teléfono, cápsula, líquido, fábrica, pájaro. In país en río krijgt de beklemtoonde í naast een open klinker een accent vanwege de klinkerbotsing."
         },
         {
           "es": "Algunos monosílabos se distinguen por su función: tu libro / tú lees, el libro / él lee, si vienes / sí, voy, mi casa / para mí. Interrogativos y exclamativos llevan tilde: qué, cómo, cuándo. Estudio y estudió tienen distinto acento y distinta forma verbal.",
@@ -35363,8 +35371,8 @@
         "F54"
       ],
       "title": {
-        "es": "Acentos y escritura gramatical",
-        "nl": "Accenten en grammaticale spelling"
+        "es": "Acento, tilde y sílaba tónica",
+        "nl": "Klemtoon, accentteken en lettergrepen"
       },
       "goal": {
         "es": "Reconocer cambios de significado y función en la escritura.",
@@ -35421,6 +35429,262 @@
           "mode": "word",
           "instruction": null,
           "id": "A01_2"
+        },
+        {
+          "id": "A01-lab-accent-0",
+          "stem": "Escribe la palabra con su ortografía normal: hablar. Sílaba fuerte: ha BLAR.",
+          "answers": [
+            "hablar"
+          ],
+          "mode": "word",
+          "instruction": {
+            "es": "Usa las reglas de acentuación; las mayúsculas solo indican aquí la sílaba fuerte.",
+            "nl": "Gebruik de accentregels; hoofdletters tonen hier alleen de klemtoon."
+          },
+          "why": {
+            "es": "La forma escrita es hablar. La sílaba tónica es ha BLAR. El color o las mayúsculas de apoyo no forman parte de la ortografía.",
+            "nl": "De spelling is hablar. De klemtoon ligt zo: ha BLAR. Steunkleuren of hoofdletters horen niet bij de gewone spelling."
+          }
+        },
+        {
+          "id": "A01-lab-accent-1",
+          "stem": "Escribe la palabra con su ortografía normal: ciudad. Sílaba fuerte: ciu DAD.",
+          "answers": [
+            "ciudad"
+          ],
+          "mode": "word",
+          "instruction": {
+            "es": "Usa las reglas de acentuación; las mayúsculas solo indican aquí la sílaba fuerte.",
+            "nl": "Gebruik de accentregels; hoofdletters tonen hier alleen de klemtoon."
+          },
+          "why": {
+            "es": "La forma escrita es ciudad. La sílaba tónica es ciu DAD. El color o las mayúsculas de apoyo no forman parte de la ortografía.",
+            "nl": "De spelling is ciudad. De klemtoon ligt zo: ciu DAD. Steunkleuren of hoofdletters horen niet bij de gewone spelling."
+          }
+        },
+        {
+          "id": "A01-lab-accent-2",
+          "stem": "Escribe la palabra con su ortografía normal: reloj. Sílaba fuerte: re LOJ.",
+          "answers": [
+            "reloj"
+          ],
+          "mode": "word",
+          "instruction": {
+            "es": "Usa las reglas de acentuación; las mayúsculas solo indican aquí la sílaba fuerte.",
+            "nl": "Gebruik de accentregels; hoofdletters tonen hier alleen de klemtoon."
+          },
+          "why": {
+            "es": "La forma escrita es reloj. La sílaba tónica es re LOJ. El color o las mayúsculas de apoyo no forman parte de la ortografía.",
+            "nl": "De spelling is reloj. De klemtoon ligt zo: re LOJ. Steunkleuren of hoofdletters horen niet bij de gewone spelling."
+          }
+        },
+        {
+          "id": "A01-lab-accent-3",
+          "stem": "Escribe la palabra con su ortografía normal: escribir. Sílaba fuerte: es cri BIR.",
+          "answers": [
+            "escribir"
+          ],
+          "mode": "word",
+          "instruction": {
+            "es": "Usa las reglas de acentuación; las mayúsculas solo indican aquí la sílaba fuerte.",
+            "nl": "Gebruik de accentregels; hoofdletters tonen hier alleen de klemtoon."
+          },
+          "why": {
+            "es": "La forma escrita es escribir. La sílaba tónica es es cri BIR. El color o las mayúsculas de apoyo no forman parte de la ortografía.",
+            "nl": "De spelling is escribir. De klemtoon ligt zo: es cri BIR. Steunkleuren of hoofdletters horen niet bij de gewone spelling."
+          }
+        },
+        {
+          "id": "A01-lab-accent-4",
+          "stem": "Escribe la palabra con su ortografía normal: cantan. Sílaba fuerte: CAN tan.",
+          "answers": [
+            "cantan"
+          ],
+          "mode": "word",
+          "instruction": {
+            "es": "Usa las reglas de acentuación; las mayúsculas solo indican aquí la sílaba fuerte.",
+            "nl": "Gebruik de accentregels; hoofdletters tonen hier alleen de klemtoon."
+          },
+          "why": {
+            "es": "La forma escrita es cantan. La sílaba tónica es CAN tan. El color o las mayúsculas de apoyo no forman parte de la ortografía.",
+            "nl": "De spelling is cantan. De klemtoon ligt zo: CAN tan. Steunkleuren of hoofdletters horen niet bij de gewone spelling."
+          }
+        },
+        {
+          "id": "A01-lab-accent-5",
+          "stem": "Escribe la palabra con su ortografía normal: holandesa. Sílaba fuerte: ho lan DE sa.",
+          "answers": [
+            "holandesa"
+          ],
+          "mode": "word",
+          "instruction": {
+            "es": "Usa las reglas de acentuación; las mayúsculas solo indican aquí la sílaba fuerte.",
+            "nl": "Gebruik de accentregels; hoofdletters tonen hier alleen de klemtoon."
+          },
+          "why": {
+            "es": "La forma escrita es holandesa. La sílaba tónica es ho lan DE sa. El color o las mayúsculas de apoyo no forman parte de la ortografía.",
+            "nl": "De spelling is holandesa. De klemtoon ligt zo: ho lan DE sa. Steunkleuren of hoofdletters horen niet bij de gewone spelling."
+          }
+        },
+        {
+          "id": "A01-lab-accent-6",
+          "stem": "Escribe la palabra con su ortografía normal: salen. Sílaba fuerte: SA len.",
+          "answers": [
+            "salen"
+          ],
+          "mode": "word",
+          "instruction": {
+            "es": "Usa las reglas de acentuación; las mayúsculas solo indican aquí la sílaba fuerte.",
+            "nl": "Gebruik de accentregels; hoofdletters tonen hier alleen de klemtoon."
+          },
+          "why": {
+            "es": "La forma escrita es salen. La sílaba tónica es SA len. El color o las mayúsculas de apoyo no forman parte de la ortografía.",
+            "nl": "De spelling is salen. De klemtoon ligt zo: SA len. Steunkleuren of hoofdletters horen niet bij de gewone spelling."
+          }
+        },
+        {
+          "id": "A01-lab-accent-7",
+          "stem": "Escribe la palabra con su ortografía normal: hablas. Sílaba fuerte: HA blas.",
+          "answers": [
+            "hablas"
+          ],
+          "mode": "word",
+          "instruction": {
+            "es": "Usa las reglas de acentuación; las mayúsculas solo indican aquí la sílaba fuerte.",
+            "nl": "Gebruik de accentregels; hoofdletters tonen hier alleen de klemtoon."
+          },
+          "why": {
+            "es": "La forma escrita es hablas. La sílaba tónica es HA blas. El color o las mayúsculas de apoyo no forman parte de la ortografía.",
+            "nl": "De spelling is hablas. De klemtoon ligt zo: HA blas. Steunkleuren of hoofdletters horen niet bij de gewone spelling."
+          }
+        },
+        {
+          "id": "A01-lab-accent-8",
+          "stem": "Escribe la palabra con su ortografía normal: kilometro. Sílaba fuerte: ki LÓ me tro.",
+          "answers": [
+            "kilómetro"
+          ],
+          "mode": "word",
+          "instruction": {
+            "es": "Usa las reglas de acentuación; las mayúsculas solo indican aquí la sílaba fuerte.",
+            "nl": "Gebruik de accentregels; hoofdletters tonen hier alleen de klemtoon."
+          },
+          "why": {
+            "es": "La forma escrita es kilómetro. La sílaba tónica es ki LÓ me tro. El color o las mayúsculas de apoyo no forman parte de la ortografía.",
+            "nl": "De spelling is kilómetro. De klemtoon ligt zo: ki LÓ me tro. Steunkleuren of hoofdletters horen niet bij de gewone spelling."
+          }
+        },
+        {
+          "id": "A01-lab-accent-9",
+          "stem": "Escribe la palabra con su ortografía normal: telefono. Sílaba fuerte: te LÉ fo no.",
+          "answers": [
+            "teléfono"
+          ],
+          "mode": "word",
+          "instruction": {
+            "es": "Usa las reglas de acentuación; las mayúsculas solo indican aquí la sílaba fuerte.",
+            "nl": "Gebruik de accentregels; hoofdletters tonen hier alleen de klemtoon."
+          },
+          "why": {
+            "es": "La forma escrita es teléfono. La sílaba tónica es te LÉ fo no. El color o las mayúsculas de apoyo no forman parte de la ortografía.",
+            "nl": "De spelling is teléfono. De klemtoon ligt zo: te LÉ fo no. Steunkleuren of hoofdletters horen niet bij de gewone spelling."
+          }
+        },
+        {
+          "id": "A01-lab-accent-10",
+          "stem": "Escribe la palabra con su ortografía normal: capsula. Sílaba fuerte: CÁP su la.",
+          "answers": [
+            "cápsula"
+          ],
+          "mode": "word",
+          "instruction": {
+            "es": "Usa las reglas de acentuación; las mayúsculas solo indican aquí la sílaba fuerte.",
+            "nl": "Gebruik de accentregels; hoofdletters tonen hier alleen de klemtoon."
+          },
+          "why": {
+            "es": "La forma escrita es cápsula. La sílaba tónica es CÁP su la. El color o las mayúsculas de apoyo no forman parte de la ortografía.",
+            "nl": "De spelling is cápsula. De klemtoon ligt zo: CÁP su la. Steunkleuren of hoofdletters horen niet bij de gewone spelling."
+          }
+        },
+        {
+          "id": "A01-lab-accent-11",
+          "stem": "Escribe la palabra con su ortografía normal: volcan. Sílaba fuerte: vol CÁN.",
+          "answers": [
+            "volcán"
+          ],
+          "mode": "word",
+          "instruction": {
+            "es": "Usa las reglas de acentuación; las mayúsculas solo indican aquí la sílaba fuerte.",
+            "nl": "Gebruik de accentregels; hoofdletters tonen hier alleen de klemtoon."
+          },
+          "why": {
+            "es": "La forma escrita es volcán. La sílaba tónica es vol CÁN. El color o las mayúsculas de apoyo no forman parte de la ortografía.",
+            "nl": "De spelling is volcán. De klemtoon ligt zo: vol CÁN. Steunkleuren of hoofdletters horen niet bij de gewone spelling."
+          }
+        },
+        {
+          "id": "A01-lab-accent-12",
+          "stem": "Escribe la palabra con su ortografía normal: liquido. Sílaba fuerte: LÍ qui do.",
+          "answers": [
+            "líquido"
+          ],
+          "mode": "word",
+          "instruction": {
+            "es": "Usa las reglas de acentuación; las mayúsculas solo indican aquí la sílaba fuerte.",
+            "nl": "Gebruik de accentregels; hoofdletters tonen hier alleen de klemtoon."
+          },
+          "why": {
+            "es": "La forma escrita es líquido. La sílaba tónica es LÍ qui do. El color o las mayúsculas de apoyo no forman parte de la ortografía.",
+            "nl": "De spelling is líquido. De klemtoon ligt zo: LÍ qui do. Steunkleuren of hoofdletters horen niet bij de gewone spelling."
+          }
+        },
+        {
+          "id": "A01-lab-accent-13",
+          "stem": "Escribe la palabra con su ortografía normal: fabrica. Sílaba fuerte: FÁ bri ca.",
+          "answers": [
+            "fábrica"
+          ],
+          "mode": "word",
+          "instruction": {
+            "es": "Usa las reglas de acentuación; las mayúsculas solo indican aquí la sílaba fuerte.",
+            "nl": "Gebruik de accentregels; hoofdletters tonen hier alleen de klemtoon."
+          },
+          "why": {
+            "es": "La forma escrita es fábrica. La sílaba tónica es FÁ bri ca. El color o las mayúsculas de apoyo no forman parte de la ortografía.",
+            "nl": "De spelling is fábrica. De klemtoon ligt zo: FÁ bri ca. Steunkleuren of hoofdletters horen niet bij de gewone spelling."
+          }
+        },
+        {
+          "id": "A01-lab-accent-14",
+          "stem": "Escribe la palabra con su ortografía normal: pajaro. Sílaba fuerte: PÁ ja ro.",
+          "answers": [
+            "pájaro"
+          ],
+          "mode": "word",
+          "instruction": {
+            "es": "Usa las reglas de acentuación; las mayúsculas solo indican aquí la sílaba fuerte.",
+            "nl": "Gebruik de accentregels; hoofdletters tonen hier alleen de klemtoon."
+          },
+          "why": {
+            "es": "La forma escrita es pájaro. La sílaba tónica es PÁ ja ro. El color o las mayúsculas de apoyo no forman parte de la ortografía.",
+            "nl": "De spelling is pájaro. De klemtoon ligt zo: PÁ ja ro. Steunkleuren of hoofdletters horen niet bij de gewone spelling."
+          }
+        },
+        {
+          "id": "A01-lab-accent-15",
+          "stem": "Escribe la palabra con su ortografía normal: avion. Sílaba fuerte: a VIÓN.",
+          "answers": [
+            "avión"
+          ],
+          "mode": "word",
+          "instruction": {
+            "es": "Usa las reglas de acentuación; las mayúsculas solo indican aquí la sílaba fuerte.",
+            "nl": "Gebruik de accentregels; hoofdletters tonen hier alleen de klemtoon."
+          },
+          "why": {
+            "es": "La forma escrita es avión. La sílaba tónica es a VIÓN. El color o las mayúsculas de apoyo no forman parte de la ortografía.",
+            "nl": "De spelling is avión. De klemtoon ligt zo: a VIÓN. Steunkleuren of hoofdletters horen niet bij de gewone spelling."
+          }
         }
       ],
       "level": "A2",
@@ -65149,5 +65413,5 @@
       "variantSource": "https://tatoeba.org/en/sentences_lists/show/4141"
     }
   ],
-  "practiceRevision": 1
+  "practiceRevision": 2
 }
