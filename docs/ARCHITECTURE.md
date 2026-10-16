@@ -94,3 +94,9 @@ El contenido remoto emite `biblio:content-ready`, no un hashchange artificial. S
 `course-ui.js` presenta ruta, perfiles y pruebas por pasos. Reutiliza `BiblioAssessment.Session` para corrección y feedback. Cada intento de bloque conserva composición, fecha, respuestas y reflexión; el historial local existente recibe una segunda copia. El criterio de desbloqueo es 80 % y todos los temas declarados estudiados. El acceso de consulta continúa libre.
 
 La memoria de lectura se separa por ID de perfil. Los datos anteriores del historial y del editor conservan sus claves originales. La importación de perfiles fusiona por UUID de perfil/intento y rechaza intentos contradictorios sin sobrescribir registros. Los materiales añadidos al catálogo se incorporan al curso; una nueva composición de bloque exige un intento que la cubra, conservando los anteriores.
+
+## Estudio visual, práctica y paneles
+
+`studio.js` resuelve navegación y presentación por secciones sin desmontar controles. `studio.css` aplica la cuadrícula, Roboto y paleta Fontys. `intensive.js` obtiene los bancos de tablas/ejemplos/ejercicios existentes y ejecuta rondas con feedback. Nunca deduce que un tema está dominado solo por practicarlo.
+
+`panels.js` bloquea las rutas de gestión hasta que `POST /teacher/session` y `GET /teacher/session` confirman una sesión válida. El token se queda en memoria y no se exporta. El backend valida rol/revisión para operaciones privadas y publicación. Los archivos estáticos permanecen públicos; el login no es una técnica para ocultar JavaScript. La clave real solo se comprueba contra el registro derivado guardado en el runtime del servidor.

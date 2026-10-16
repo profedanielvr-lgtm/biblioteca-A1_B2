@@ -14,3 +14,9 @@ Comprobación: `node --test tests/api.test.mjs`. Compilación: helper Sites `bui
 
 Gramática Lab / La biblio pasa a llamarse La Biblioteca.
 La Biblioteca — Herramienta educativa sin fines lucrativos creada por Daniel Valle Robles.
+
+## Acceso compartido a paneles
+
+`BIBLIO_PANEL_CREDENTIAL` contiene un registro PBKDF2 con salt y revisión, configurado como secreto de runtime. Si existe, prevalece sobre la contraseña en D1 y bloquea la configuración antigua por `/gestion`. La clave compartida nunca se inserta en el frontend, HTML descargable o repositorio. `POST /api/teacher/session` comprueba la contraseña; `GET /api/teacher/session` valida el token. Rotar el registro invalida las sesiones docentes anteriores.
+
+El frontend estático permanece público. El login impide entrar a las pantallas de gestión por la navegación normal; las lecturas privadas y publicaciones se autorizan también en el servidor. Una copia local del HTML no puede modificar el contenido compartido sin un token válido.

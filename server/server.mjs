@@ -6,7 +6,7 @@ import {resolve,join,extname,sep} from 'node:path';
 import {pathToFileURL} from 'node:url';
 
 export function makeServer({dataDir,secret,teacherPassword,origin,staticDir,now=()=>Date.now()}){
- if(!secret||secret.length<32||!teacherPassword||teacherPassword.length<12)throw Error('Configure BIBLIO_SECRET (32+ characters) and BIBLIO_TEACHER_PASSWORD (12+).');
+ if(!secret||secret.length<32||!teacherPassword||teacherPassword.length<8)throw Error('Configure BIBLIO_SECRET (32+ characters) and BIBLIO_TEACHER_PASSWORD (8+).');
  mkdirSync(dataDir,{recursive:true});const db=new DatabaseSync(join(dataDir,'biblioteca.sqlite'));
  db.exec(`PRAGMA journal_mode=WAL; PRAGMA foreign_keys=ON;
  CREATE TABLE IF NOT EXISTS classes(id TEXT PRIMARY KEY,pin_hash TEXT UNIQUE NOT NULL,created_at TEXT NOT NULL,expires_at INTEGER NOT NULL);
@@ -27,6 +27,7 @@ export function makeServer({dataDir,secret,teacherPassword,origin,staticDir,now=
   const requestOrigin=req.headers.origin;if(requestOrigin&&requestOrigin!==origin)throw Object.assign(Error('Origin not allowed'),{status:403});if(requestOrigin){res.setHeader('Access-Control-Allow-Origin',origin);res.setHeader('Vary','Origin');res.setHeader('Access-Control-Allow-Headers','Content-Type, Authorization');res.setHeader('Access-Control-Allow-Methods','GET, POST, OPTIONS');}if(req.method==='OPTIONS'){res.writeHead(204);res.end();return;}
   const url=new URL(req.url,'http://localhost'),path=url.pathname.replace(/^\/api/,'');
   if(req.method==='GET'&&path==='/health'){json(res,200,{ok:true,schemaVersion:1,storage:'sqlite-append-only'});return;}
+  if(req.method==='GET'&&path==='/teacher/session'){const claims=auth(req,'teacher');json(res,200,{ok:true,expiresAt:new Date(claims.exp).toISOString()});return;}
   if(req.method==='POST'&&path==='/teacher/session'){limit(req);const b=await body(req);if(!equal(String(b.password||''),teacherPassword))throw Object.assign(Error('Incorrect password'),{status:401});json(res,200,{token:token({role:'teacher'})});return;}
   if(req.method==='GET'&&path==='/content/latest'){const row=db.prepare('SELECT * FROM content_versions ORDER BY created_at DESC,rowid DESC LIMIT 1').get();json(res,200,row?{id:row.id,createdAt:row.created_at,library:JSON.parse(row.payload)}:{library:null});return;}
   if(req.method==='POST'&&path==='/content'){auth(req,'teacher');const b=await body(req,10*1024*1024),d=b.library;if(!d||!Array.isArray(d.cards)||!d.cards.length||d.cards.length>500||!d.sources||!d.authenticSources||!d.groups||d.cards.some(c=>!c.id||!c.title?.es||!c.title?.nl||!['A1','A2','B1','B2'].includes(c.level)||!Array.isArray(c.exercises)))throw Object.assign(Error('Invalid library. Validate the editorial copy first.'),{status:400});const id=randomUUID();db.prepare('INSERT INTO content_versions VALUES(?,?,?)').run(id,new Date(now()).toISOString(),JSON.stringify(d));json(res,201,{id});return;}

@@ -1,8 +1,33 @@
-# La Biblioteca
+# La biblioteca
 
 Gramática española y didáctica para docentes en formación y en ejercicio del onderbouw (vmbo-t, havo y vwo). 123 fichas de A1 a B2, español/neerlandés, práctica formativa y propuestas de aula. Roboto está incluida; no se carga desde Google Fonts. Colores: Fontys morado `#663366`, magenta `#E5007D` y azul `#0076E0`.
 
 **Gramática Lab / La biblio pasa a llamarse La Biblioteca.**
+
+## Interfaz y práctica intensiva
+
+Nombre visible: **La biblioteca**. Roboto está incluida localmente. La interfaz usa blanco, azul Fontys `#0076E0`, morado `#663366` y acentos contenidos. El azul de los botones con texto blanco se oscurece mínimamente a `#0075DF` para superar 4,5:1 de contraste. Guía contrastada: https://www.fontys.nl/Content/Overzicht-Kleurcodes-Fontys.htm (16-10-2026).
+
+La navegación principal reúne ruta, práctica intensiva, biblioteca, historial y perfil. Las fichas muestran una sección a la vez; cambiar de sección conserva los campos y despliegues. La teoría completa sigue disponible. Los modelos, esquemas y ejemplos tienen prioridad visual.
+
+En **Práctica intensiva** (`#entrenar`) hay cuatro herramientas:
+
+- Conjugar: 231 formas extraídas de los paradigmas A1/A2 ya revisados; conserva personas, variantes y tildes. Se filtra por nivel, verbo y tiempo/forma. No presenta un paradigma B2 incompleto como si fuera un banco B2.
+- Completar: 254 ejercicios A1–B2.
+- Asociar: 239 pares ES/NL de los ejemplos de las fichas.
+- Ordenar: 237 modelos breves A1–B2. Se reconstruye el modelo; no se afirma que exista un único orden gramatical posible.
+
+Rondas de diez tareas con feedback inmediato, explicación, repetición y repaso de errores. El modo y los filtros se conservan por perfil. Con perfil activo, cada respuesta se añade al historial local. No se marca automáticamente un tema como estudiado ni se sustituye la prueba formativa del bloque.
+
+## Acceso a Redactiepanel y Docentenpanel
+
+Ambos paneles exigen login. La contraseña se valida en la API; no se guarda ni compara en JavaScript público. La sesión dura 30 minutos y vive en memoria. Cerrar sesión o caducar vuelve a mostrar el login y conserva los borradores.
+
+En la publicación compartida, `BIBLIO_PANEL_CREDENTIAL` es un secreto del servidor con un registro PBKDF2, salt y revisión. No se incluye su valor ni la clave en este repositorio, ZIP o HTML. El propietario lo configura desde el alojamiento; la pantalla antigua `/gestion` no puede sustituirlo mientras esté activo. La publicación editorial y la consulta de registros remotos se autorizan también en servidor.
+
+El HTML y las fichas son públicos y descargables. La protección no pretende ocultar ese código ni impedir preparar una copia local; impide usar las pantallas de gestión y modificar los datos compartidos sin una sesión autorizada. El HTML descargado permite consulta/práctica sin conexión; para la gestión protegida utiliza la versión publicada con conexión HTTPS.
+
+Tras entrar en Redactiepanel, **Publicar cambios** valida el borrador y publica una nueva versión en el servidor, conservando intentos y contenidos previos. La exportación HTML/JSON sigue disponible para copias y revisión.
 
 ## Ruta A1–B2 y perfiles
 
@@ -53,7 +78,7 @@ Las propuestas se adaptan al nivel real de los adolescentes; no se recomienda im
 4. Usa **Revisar ficha**. Los borradores pertenecen al navegador; puedes compartir una copia JSON con otro docente. El formato editorial nuevo usa una clave distinta y conserva intactos los borradores de la versión anterior. El historial de intentos usa otro almacenamiento.
 5. Para GitHub Pages: **Preparar publicación → Descargar index.html** y sustituye ese archivo en el repositorio. El HTML exportado es autocontenido. Para publicación directa mediante el servidor opcional, entra al servidor en **Panel del profesor** y pulsa **Publicar copia editorial en el servidor**.
 
-El panel estático permite preparar una copia local. No simula una protección mediante contraseña en JavaScript. La publicación en GitHub requiere permisos del repositorio. La publicación en el servidor requiere una sesión docente autenticada.
+El panel exige una sesión verificada en servidor y permite preparar un borrador local. La publicación en GitHub requiere permisos del repositorio. La publicación en el servidor requiere una sesión docente autenticada.
 
 ## Práctica, intentos y PIN
 
@@ -85,7 +110,7 @@ Un editor externo puede bloquear el iframe mediante CSP o X-Frame-Options. La ap
 
 La conexión pública ya está incluida en `content/config.js`. El alumnado no necesita cuenta de ChatGPT para consultar, practicar ni sincronizar con código y PIN activo.
 
-1. El propietario abre https://gramatica-a2-ele-fontys.daniel-vr.chatgpt.site/gestion y elige una contraseña docente de al menos 12 caracteres. Solo esta configuración inicial requiere su cuenta de propietario.
+1. Abre Redactiepanel o Docentenpanel y entra con la contraseña docente configurada para la aplicación. La configuración de acceso se mantiene en el alojamiento, separada de las fichas.
 2. En **Panel del profesor**, entra con esa contraseña y activa un PIN nuevo para el grupo. El PIN dura 24 horas y la sesión 30 minutos.
 3. El estudiante usa siempre el mismo código y el PIN activo al iniciar el intento. Sin PIN, la práctica se conserva solo en el navegador. Para recuperar el historial del servidor, introduce código y PIN activo en **Mi historial**; también aparecerán intentos de PIN anteriores.
 4. Para editar, prepara los cambios en **Panel de editores** y usa **Publicar copia editorial en el servidor** desde el panel docente. Cada publicación crea una versión y conserva los intentos.

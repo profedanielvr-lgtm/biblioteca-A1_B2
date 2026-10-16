@@ -2,6 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {DatabaseSync} from 'node:sqlite';
 import {readFileSync} from 'node:fs';
+import {pbkdf2Sync,randomBytes} from 'node:crypto';
 import {handleLibraryRequest} from '../lib/biblioteca-api.mjs';
 test('shared API: owner setup, scoped history across PINs, append-only attempts and content versions',async()=>{
  const sqlite=new DatabaseSync(':memory:');sqlite.exec(readFileSync(new URL('../drizzle/0000_loud_landau.sql',import.meta.url),'utf8'));
@@ -37,5 +38,11 @@ test('shared API: owner setup, scoped history across PINs, append-only attempts 
  assert.equal([...objects.keys()].filter(k=>k.startsWith('attempt-backups/')).length,2);
  assert.equal((await call('/teacher/setup',{password:'changed-password-test'},null,{userId:'owner-test'})).status,200);
  assert.equal((await call('/classes',{classPin:'CLASS03'},teacher)).status,401);
+ const salt=randomBytes(18),encode=b=>b.toString('base64url');env.BIBLIO_PANEL_CREDENTIAL=JSON.stringify({salt:encode(salt),hash:encode(pbkdf2Sync('shared-test-password',salt,100000,32,'sha256')),revision:'test-panel-revision'});
+ assert.equal((await call('/teacher/session',{password:'wrong'})).status,401);
+ const panel=(await call('/teacher/session',{password:'shared-test-password'})).data.token;assert(panel);
+ assert.equal((await call('/teacher/session',null,panel)).data.ok,true);
+ assert.equal((await call('/teacher/session',null,teacher)).status,401);
+ assert.equal((await call('/teacher/setup',{password:'changed-password-test'},null,{userId:'owner-test'})).status,403);
  sqlite.close();
 });
