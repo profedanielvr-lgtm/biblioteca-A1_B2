@@ -1,1 +1,1 @@
-window.BIBLIO_BUILD = {"id": "2026.10.16-cloud-visual", "builtAt": "2026-10-16T12:49:38+00:00"};
+window.BIBLIO_BUILD = {"id": "2026.10.16-cloud-visual", "builtAt": "2026-10-16T12:52:42+00:00"};
