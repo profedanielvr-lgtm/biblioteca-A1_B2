@@ -86,3 +86,11 @@ Las pruebas ejecutan el DOM con linkedom y IndexedDB con fake-indexeddb, no un n
 `visual-learning.js` compone esquemas, ejemplos interactivos y un slot opcional `illustration: {url, alt: {es,nl}, caption: {es,nl}}`. La teoría completa se conserva en acordeones nativos. URLs HTTPS y textos alternativos se validan antes de publicar.
 
 El contenido remoto emite `biblio:content-ready`, no un hashchange artificial. Solo se solicita una vez por carga, con timeout de 10 s; no reemplaza la pantalla de un intento activo ni el editor. Sin servidor disponible, la consulta local sigue operativa. `content/version.js` es independiente del catálogo y fija el sello temporal del código publicado.
+
+## Curso y perfiles
+
+`course-model.js` genera la ruta a partir del catálogo, respeta prerrequisitos y agrupa hasta cinco fichas. `ProfileStore` usa la clave estable `la-biblioteca-profiles-v1`; nombres, progreso, historial de pruebas y borrador pertenecen a cada perfil. Las escrituras que fallan se revierten; no se confirma un check guardado si el navegador rechaza el almacenamiento. Los perfiles no son autenticación ni contienen contraseñas.
+
+`course-ui.js` presenta ruta, perfiles y pruebas por pasos. Reutiliza `BiblioAssessment.Session` para corrección y feedback. Cada intento de bloque conserva composición, fecha, respuestas y reflexión; el historial local existente recibe una segunda copia. El criterio de desbloqueo es 80 % y todos los temas declarados estudiados. El acceso de consulta continúa libre.
+
+La memoria de lectura se separa por ID de perfil. Los datos anteriores del historial y del editor conservan sus claves originales. La importación de perfiles fusiona por UUID de perfil/intento y rechaza intentos contradictorios sin sobrescribir registros. Los materiales añadidos al catálogo se incorporan al curso; una nueva composición de bloque exige un intento que la cubra, conservando los anteriores.

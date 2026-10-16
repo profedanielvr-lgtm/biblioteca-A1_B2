@@ -4,7 +4,7 @@ import json,re,csv,io
 from datetime import datetime,timezone
 P=Path(__file__).resolve().parent
 data=json.loads((P/'content'/'catalog.json').read_text())
-version={'id':'2026.10.16-visual','builtAt':datetime.now(timezone.utc).isoformat(timespec='seconds')}
+version={'id':'2026.10.16-mooc','builtAt':datetime.now(timezone.utc).isoformat(timespec='seconds')}
 (P/'content'/'version.js').write_text('window.BIBLIO_BUILD = '+json.dumps(version)+';')
 (P/'content'/'catalog.js').write_text('window.GRAMMAR = '+json.dumps(data,ensure_ascii=False,separators=(',',':')).replace('</script','<\\/script')+';')
 csvfile=io.StringIO();writer=csv.writer(csvfile);writer.writerow(['id','nivel','categoria','tema','PCIC','Kennisbasis'])

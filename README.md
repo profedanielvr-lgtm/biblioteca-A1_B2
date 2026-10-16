@@ -4,6 +4,21 @@ Gramática española y didáctica para docentes en formación y en ejercicio del
 
 **Gramática Lab / La biblio pasa a llamarse La Biblioteca.**
 
+## Ruta A1–B2 y perfiles
+
+La portada es una ruta de aprendizaje con cuatro niveles y 26 bloques (A1: 10; A2: 6; B1: 6; B2: 4). La biblioteca de consulta permanece en `#biblioteca`; la ruta en `#ruta`, los perfiles en `#perfiles` y las pruebas de bloque en `#prueba/A1-01`, etc.
+
+1. Crea un perfil con alias y código opcional. El código generado es estable. Los perfiles son locales y no tienen contraseña: en un dispositivo compartido, otra persona puede elegirlos. No son cuentas institucionales.
+2. Pulsa **Continuar mi aprendizaje**. Abrir un tema lo marca en curso; **Marcar como estudiado** añade el check verde. La marca expresa que has trabajado el tema, no que domines todas sus aplicaciones.
+3. Al estudiar todos los temas de un bloque, realiza la **formatieve toets**. Incluye dos preguntas por tema y una decisión didáctica. La reflexión se guarda para revisión, sin fingir corrección automática.
+4. El 80 % en la parte autocorregible permite pasar al siguiente bloque. Todos los bloques del nivel deben estar superados para avanzar al siguiente nivel. La consulta puntual de otros temas sigue disponible.
+5. Si hace falta, revisa el feedback y vuelve a intentarlo. Se conservan intentos, respuestas y fechas. El borrador de prueba permite continuar tras recargar. La ruta propone repasos al día siguiente y, tras aciertos, a la semana.
+6. En **Mi perfil**, cambia de perfil, modifica el nombre y descarga/importa una copia. La importación añade intentos y rechaza conflictos. No se borra progreso al actualizar la aplicación. Borrar los datos del navegador puede perder perfiles; conserva copias.
+
+La ruta no sincroniza perfiles automáticamente entre dispositivos. Usa exportación/importación para trasladarlos. La API de pruebas de clase con PIN sigue funcionando por separado. No se trasladan checks anteriores de forma arbitraria: una respuesta de práctica previa no demuestra que una lección completa se haya estudiado.
+
+El informe [BENCHMARK-MOOC.md](docs/BENCHMARK-MOOC.md) recoge la comparación de cinco plataformas, las fuentes de investigación y los límites de las decisiones adoptadas.
+
 ## Usar la biblioteca
 
 Abre `index.html` desde GitHub Pages o un servidor estático conservando las carpetas. Para usarla sin servidor, abre `La-Biblioteca.html`, que contiene estilos, datos, código, fuente y once audios. El archivo descargado no necesita cuenta de ChatGPT. Se incluye un ZIP comprobado en `downloads/La-Biblioteca.zip`.
