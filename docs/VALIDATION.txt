@@ -1,0 +1,65 @@
+Revisión local, 18 de octubre de 2026
+
+Catálogo original idéntico byte a byte: 123 fichas, 1738 ejercicios.
+Backend Sites recuperado: f46a71d586be29e88c2ee35a2d4a11b32de7e041.
+Frontend de origen: d43dca51db60e5e59be899a161933e05f843068b.
+Sin publicación ni cambios en producción.
+Inspección visual en navegador real pendiente por fallo de sesión del navegador.
+
+✔ shared API: owner setup, scoped history across PINs, append-only attempts and content versions (351.351ms)
+✔ cloud learner accounts isolate data, merge two devices, preserve attempts, resume reading and survive storage failure (342.8961ms)
+✔ attempts survive app instances, different class PINs, idempotent restore and conflicts (41.4071ms)
+✔ student code, nonempty exam PIN, grading and full feedback record (1.6226ms)
+✔ level-specific question bank covers several categories and keeps unique IDs (11.782ms)
+✔ preloads then starts from requested clip, counts exactly two plays, refunds load failures and adapts speed (3.0773ms)
+✔ all new question models and curriculum tags are valid and sources exist (11.5288ms)
+✔ reading resume validates routes, honours explicit links and survives unavailable storage (1.2343ms)
+✔ A1–B2 route covers each lesson once, respects prerequisites and assesses every topic in every block (7.3936ms)
+✔ profiles isolate progress, retain all retakes, gate blocks/levels and recover after an app reload (10.6246ms)
+✔ profile backups merge attempts additively and reject conflicts without data loss (1.7736ms)
+✔ blocked storage cannot report a saved completion and invalid backup data is rejected (0.5538ms)
+✔ Fontys number opens the same stable profile and practice survives backup, merge and reload (1.4846ms)
+✔ numeric legacy profiles merge with a newer profile of the same number without deleting practice (0.6006ms)
+✔ mastery needs distinct questions and separate days, and recent errors trigger reinforcement (46.7174ms)
+✔ all 123 cards render in both languages, resources stay internal, editorial form and standalone export work (3989.8902ms)
+✔ IndexedDB persists across instances and atomically enforces two playback reservations (66.6612ms)
+✔ guided practice saves two attempts across PINs and always starts with an empty PIN (114.3156ms)
+✔ visual lessons, exact resume, persistent answers, step navigation and immutable build timestamp (266.1286ms)
+✔ remote catalogue refresh runs once and never navigates or replaces an active attempt (324.4077ms)
+✔ MOOC flow: create profile, study block, resume quiz, fail, retake, unlock and isolate a second profile (294.4532ms)
+✔ teacher routes require server-verified login, reject wrong passwords and relock on logout (190.0313ms)
+✔ studio shows one lesson section at a time and all five practice tools give immediate feedback (138.9461ms)
+✔ topic drills, choice feedback, error review and visual schemes work without marking lessons complete (486.4113ms)
+✔ an older shared catalogue retains teacher edits and receives only the missing new practice items (120.4864ms)
+✔ personal exercise history needs no PIN, saves both results in the profile and restores on return (598.0136ms)
+✔ reopening and repeating lessons changes order, new drills change first question and module progress fills upward (299.022ms)
+✔ number-only sign-in works, options keep the right answer after randomisation and a finished block reaches 100 percent (61.5735ms)
+✔ real cloud API connects two isolated browser profiles, restores checks/history/last lesson and shows dashboard (613.3071ms)
+✔ accent and possession illustrations are interactive SVG and use correct written accent forms (206.2282ms)
+✔ server preserves evidence from concurrent devices and legacy clients, rejecting conflicting immutable records (20.4219ms)
+✔ server rejects malformed event histories before accepting a profile (2.0403ms)
+✔ receptive and productive evidence stay separate; immediate correction is not delayed retrieval (13.5962ms)
+✔ difficult cards enter the general queue without overwriting their answer history (0.8205ms)
+✔ concurrent evidence merges idempotently, rejects conflicting IDs and retains collection resources (2.6218ms)
+✔ starter decks provide unique sense cards, both languages and contextual examples at every level (1.1296ms)
+✔ home, bidirectional vocabulary, staged feedback, difficult cards and evidence persist through reload (317.222ms)
+✔ profiles export/import and cloud-style merge retain work from two devices without mixing identities (80.9444ms)
+✔ teaching lab branches, draft, rubric and submission distinguish a product from a teacher review (105.2801ms)
+✔ diagnostic evidence unlocks only the matching block and preserves lesson states (66.1547ms)
+✔ both interface languages expose vocabulary, lab, collections and consultation filters (163.9095ms)
+✔ an interrupted vocabulary session resumes the typed response and a personal deck survives profile backup (92.4418ms)
+✔ conjugation models preserve person, tense, accents and paired comer/vivir columns (12.9822ms)
+✔ intensive banks cover A1–B2, use verified examples and offer unique matching options (67.5633ms)
+✔ all 123 topics can be isolated, all new forms grade, and choice distractors exclude every valid answer (792.1763ms)
+✔ clock hands include hour displacement and accept the following hour for menos cuarto (1.1225ms)
+✔ server protects teacher records, preserves attempts across PINs and restarts, and rejects rewrites (681.3008ms)
+ℹ tests 47
+ℹ suites 0
+ℹ pass 47
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8476.0958
+
+exit 0

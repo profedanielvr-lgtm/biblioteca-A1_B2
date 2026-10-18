@@ -4,13 +4,13 @@ import json,re,csv,io
 from datetime import datetime,timezone
 P=Path(__file__).resolve().parent
 data=json.loads((P/'content'/'catalog.json').read_text())
-version={'id':'2026.10.16-cloud-visual','builtAt':datetime.now(timezone.utc).isoformat(timespec='seconds')}
+version={'id':'2026.10.18-learning-vocabulary-lab','builtAt':datetime.now(timezone.utc).isoformat(timespec='seconds')}
 (P/'content'/'version.js').write_text('window.BIBLIO_BUILD = '+json.dumps(version)+';')
 (P/'content'/'catalog.js').write_text('window.GRAMMAR = '+json.dumps(data,ensure_ascii=False,separators=(',',':')).replace('</script','<\\/script')+';')
 csvfile=io.StringIO();writer=csv.writer(csvfile);writer.writerow(['id','nivel','categoria','tema','PCIC','Kennisbasis'])
 for c in data['cards']:
  m=c.get('curriculum',{});writer.writerow([c['id'],c['level'],m.get('category',''),c['title']['es'],m.get('pcic',{}).get('url',''),';'.join(m.get('knowledgeBasis',[]))])
-(P/'content'/'crosswalk.csv').write_text(csvfile.getvalue())
+(P/'content'/'crosswalk.csv').write_bytes(csvfile.getvalue().encode('utf-8'))
 shell=(P/'template.html').read_text()
 asset_version=version['builtAt'].replace(':','').replace('+','')
 shell=re.sub(r'(href|src)="((?:styles|modules|content)/[^"]+\.(?:css|js))"',lambda m:m[1]+'="'+m[2]+'?v='+asset_version+'"',shell)
