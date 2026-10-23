@@ -208,8 +208,8 @@
         "es": "Sujeto, pronombres y orden de la frase",
         "nl": "Onderwerp, voornaamwoorden en woordvolgorde"
       },
-      "interactivePilot": false,
-      "reviewStatus": "needs-visual-audit"
+      "interactivePilot": true,
+      "reviewStatus": "pilot-needs-human-review"
     },
     {
       "id": "F22",
@@ -308,8 +308,8 @@
         "es": "Elegir ser o estar",
         "nl": "Kiezen tussen ser en estar"
       },
-      "interactivePilot": false,
-      "reviewStatus": "needs-visual-audit"
+      "interactivePilot": true,
+      "reviewStatus": "pilot-needs-human-review"
     },
     {
       "id": "F32",
@@ -598,8 +598,8 @@
         "es": "Por y para en usos básicos",
         "nl": "Por en para in basisgebruik"
       },
-      "interactivePilot": false,
-      "reviewStatus": "needs-visual-audit"
+      "interactivePilot": true,
+      "reviewStatus": "pilot-needs-human-review"
     },
     {
       "id": "F61",

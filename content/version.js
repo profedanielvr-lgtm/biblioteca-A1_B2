@@ -1,1 +1,1 @@
-window.BIBLIO_BUILD = {"id":"2026.10.23-contextual-review","builtAt":"2026-10-23T09:11:34+00:00"};
+window.BIBLIO_BUILD = {"id":"2026.10.23-teaching-favorites-pdf","builtAt":"2026-10-23T09:57:49+00:00"};
