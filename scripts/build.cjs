@@ -2,7 +2,7 @@
 const fs=require('node:fs'),path=require('node:path');
 const root=path.join(__dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8'),write=(p,s)=>fs.writeFileSync(path.join(root,p),s);
 const data=JSON.parse(read('content/catalog.json'));
-const version={id:'2026.10.23-visual-foundation',builtAt:new Date().toISOString().replace(/\.\d{3}Z$/,'+00:00')};
+const version={id:'2026.10.23-contextual-review',builtAt:new Date().toISOString().replace(/\.\d{3}Z$/,'+00:00')};
 write('content/version.js','window.BIBLIO_BUILD = '+JSON.stringify(version)+';');
 write('content/catalog.js','window.GRAMMAR = '+JSON.stringify(data).replace(/<\/script/g,'<\\/script')+';');
 const csvCell=x=>/[",\r\n]/.test(String(x))?'"'+String(x).replace(/"/g,'""')+'"':String(x);
