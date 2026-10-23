@@ -1,1 +1,1 @@
-window.BIBLIO_BUILD = {"id": "2026.10.18-learning-vocabulary-lab", "builtAt": "2026-10-18T15:09:56+00:00"};
+window.BIBLIO_BUILD = {"id":"2026.10.23-visual-foundation","builtAt":"2026-10-23T08:54:18+00:00"};

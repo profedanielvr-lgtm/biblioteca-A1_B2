@@ -1,5 +1,7 @@
 # La biblioteca
 
+La base visual de octubre se documenta en [VISUAL-FOUNDATION.md](docs/VISUAL-FOUNDATION.md). Incluye dos pilotos de teoría, tres vistas previas de vocabulario y un inventario de cobertura pendiente de revisión. `npm run build` funciona con Node, sin Python. `npm run audit:visual` actualiza el inventario.
+
 La ampliación local de octubre de 2026 se documenta en [LEARNING-HUB.md](docs/LEARNING-HUB.md). Esa página prevalece sobre los recuentos y descripciones anteriores para vocabulario, repaso, evidencias y laboratorio. La publicación de esta ampliación está pendiente.
 
 Gramática española y didáctica para docentes en formación y en ejercicio del onderbouw (vmbo-t, havo y vwo). 123 fichas de A1 a B2, español/neerlandés, práctica formativa y propuestas de aula. Roboto está incluida; no se carga desde Google Fonts. Colores: Fontys morado `#663366`, magenta `#E5007D` y azul `#0076E0`.

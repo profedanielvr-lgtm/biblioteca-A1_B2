@@ -1,0 +1,1293 @@
+{
+  "schema": 1,
+  "lessons": [
+    {
+      "id": "F01",
+      "level": "A1",
+      "title": {
+        "es": "Nombres y tipos de sustantivos",
+        "nl": "Namen en soorten zelfstandige naamwoorden"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F02",
+      "level": "A1",
+      "title": {
+        "es": "Género del sustantivo",
+        "nl": "Geslacht van het zelfstandig naamwoord"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F03",
+      "level": "A1",
+      "title": {
+        "es": "Singular y plural",
+        "nl": "Enkelvoud en meervoud"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F04",
+      "level": "A1",
+      "title": {
+        "es": "Artículos definidos e indefinidos",
+        "nl": "Bepaalde en onbepaalde lidwoorden"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F05",
+      "level": "A1",
+      "title": {
+        "es": "Cuándo usar el artículo",
+        "nl": "Wanneer gebruik je een lidwoord?"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F06",
+      "level": "A2",
+      "title": {
+        "es": "El agua y el aula",
+        "nl": "El agua en el aula"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F07",
+      "level": "A1",
+      "title": {
+        "es": "Al y del",
+        "nl": "Al en del"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F08",
+      "level": "A1",
+      "title": {
+        "es": "Adjetivos y gentilicios",
+        "nl": "Bijvoeglijke naamwoorden en herkomst"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F09",
+      "level": "A2",
+      "title": {
+        "es": "Posición del adjetivo, buen y gran",
+        "nl": "Plaats van het bijvoeglijk naamwoord, buen en gran"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F10",
+      "level": "A2",
+      "title": {
+        "es": "Comparaciones",
+        "nl": "Vergelijkingen"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F11",
+      "level": "A2",
+      "title": {
+        "es": "Grado, el más y el mejor",
+        "nl": "Graad, el más en el mejor"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F12",
+      "level": "A1",
+      "title": {
+        "es": "Este, ese, aquel, esto, eso, aquello",
+        "nl": "Este, ese, aquel, esto, eso, aquello"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F13",
+      "level": "A1",
+      "title": {
+        "es": "Mi, tu, su, nuestro y vuestro",
+        "nl": "Mi, tu, su, nuestro en vuestro"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F14",
+      "level": "A2",
+      "title": {
+        "es": "Mío, tuyo, suyo, es mío y el mío",
+        "nl": "Mío, tuyo, suyo, es mío en el mío"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F15",
+      "level": "A1",
+      "title": {
+        "es": "Números cardinales",
+        "nl": "Hoofdtelwoorden"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F16",
+      "level": "A2",
+      "title": {
+        "es": "Ordinales hasta décimo",
+        "nl": "Rangtelwoorden tot en met tien"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F17",
+      "level": "A1",
+      "title": {
+        "es": "Mucho, poco, muy y cantidades",
+        "nl": "Mucho, poco, muy en hoeveelheden"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F18",
+      "level": "A1",
+      "title": {
+        "es": "Alguien, nadie, algo y nada",
+        "nl": "Alguien, nadie, algo en nada"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F19",
+      "level": "A2",
+      "title": {
+        "es": "Todo, cada y otro",
+        "nl": "Todo, cada en otro"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F20",
+      "level": "A1",
+      "title": {
+        "es": "Horas, fechas, precios y medidas",
+        "nl": "Tijd, datum, prijzen en maten"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F21",
+      "level": "A1",
+      "title": {
+        "es": "Sujeto, pronombres y orden de la frase",
+        "nl": "Onderwerp, voornaamwoorden en woordvolgorde"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F22",
+      "level": "A1",
+      "title": {
+        "es": "Tú, vos, usted, vosotros y ustedes",
+        "nl": "Tú, vos, usted, vosotros en ustedes"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F23",
+      "level": "A1",
+      "title": {
+        "es": "Negación y posición de no",
+        "nl": "Ontkenning en de plaats van no"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F24",
+      "level": "A1",
+      "title": {
+        "es": "Preguntas y palabras interrogativas",
+        "nl": "Vragen en vraagwoorden"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F25",
+      "level": "A1",
+      "title": {
+        "es": "Exclamaciones con qué",
+        "nl": "Uitroepen met qué"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F26",
+      "level": "A1",
+      "title": {
+        "es": "Presente regular",
+        "nl": "Regelmatige tegenwoordige tijd"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F27",
+      "level": "A1",
+      "title": {
+        "es": "Presente con cambios en la raíz",
+        "nl": "Tegenwoordige tijd met stamverandering"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F28",
+      "level": "A1",
+      "title": {
+        "es": "Otros presentes irregulares",
+        "nl": "Andere onregelmatige vormen in de tegenwoordige tijd"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F29",
+      "level": "A1",
+      "title": {
+        "es": "Ser",
+        "nl": "Ser"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F30",
+      "level": "A1",
+      "title": {
+        "es": "Estar",
+        "nl": "Estar"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F31",
+      "level": "A1",
+      "title": {
+        "es": "Elegir ser o estar",
+        "nl": "Kiezen tussen ser en estar"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F32",
+      "level": "A1",
+      "title": {
+        "es": "Hay y estar",
+        "nl": "Hay en estar"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F33",
+      "level": "A1",
+      "title": {
+        "es": "Tener, edad y sensaciones",
+        "nl": "Tener, leeftijd en gevoelens"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F34",
+      "level": "A1",
+      "title": {
+        "es": "Tiempo atmosférico",
+        "nl": "Het weer"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F35",
+      "level": "A1",
+      "title": {
+        "es": "Saber y conocer",
+        "nl": "Saber en conocer"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F36",
+      "level": "A1",
+      "title": {
+        "es": "Reflexivos y pronominales frecuentes",
+        "nl": "Wederkerende en andere werkwoorden met se"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F37",
+      "level": "A1",
+      "title": {
+        "es": "Gustar, encantar, interesar y doler",
+        "nl": "Gustar, encantar, interesar en doler"
+      },
+      "interactivePilot": true,
+      "reviewStatus": "pilot-needs-human-review"
+    },
+    {
+      "id": "F38",
+      "level": "A1",
+      "title": {
+        "es": "Usos del infinitivo",
+        "nl": "Gebruik van de infinitief"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F39",
+      "level": "A2",
+      "title": {
+        "es": "Estar + gerundio",
+        "nl": "Estar + gerundio"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F40",
+      "level": "A1",
+      "title": {
+        "es": "Planes con ir a + infinitivo",
+        "nl": "Plannen met ir a + infinitief"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F41",
+      "level": "A1",
+      "title": {
+        "es": "Poder, querer, preferir y necesitar",
+        "nl": "Poder, querer, preferir en necesitar"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F42",
+      "level": "A1",
+      "title": {
+        "es": "Tener que, hay que y deber",
+        "nl": "Tener que, hay que en deber"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F43",
+      "level": "A2",
+      "title": {
+        "es": "Empezar a, volver a y acabar de",
+        "nl": "Empezar a, volver a en acabar de"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F44",
+      "level": "A2",
+      "title": {
+        "es": "Imperativo afirmativo básico",
+        "nl": "De bevestigende gebiedende wijs"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F45",
+      "level": "A2",
+      "title": {
+        "es": "Participios",
+        "nl": "Voltooide deelwoorden"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F46",
+      "level": "A2",
+      "title": {
+        "es": "Pretérito perfecto compuesto",
+        "nl": "Pretérito perfecto compuesto"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F47",
+      "level": "A2",
+      "title": {
+        "es": "Pretérito indefinido regular",
+        "nl": "Regelmatige pretérito indefinido"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F48",
+      "level": "A2",
+      "title": {
+        "es": "Pretérito indefinido irregular",
+        "nl": "Onregelmatige pretérito indefinido"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F49",
+      "level": "A2",
+      "title": {
+        "es": "Pretérito imperfecto",
+        "nl": "Pretérito imperfecto"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F50",
+      "level": "A2",
+      "title": {
+        "es": "Elegir entre pasados",
+        "nl": "Kiezen tussen verleden tijden"
+      },
+      "interactivePilot": true,
+      "reviewStatus": "pilot-needs-human-review"
+    },
+    {
+      "id": "F51",
+      "level": "A2",
+      "title": {
+        "es": "Pronombres de objeto directo",
+        "nl": "Voornaamwoorden als lijdend voorwerp"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F52",
+      "level": "A2",
+      "title": {
+        "es": "Pronombres de objeto indirecto",
+        "nl": "Voornaamwoorden als meewerkend voorwerp"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F53",
+      "level": "A2",
+      "title": {
+        "es": "Combinar pronombres, me lo y se lo",
+        "nl": "Voornaamwoorden combineren, me lo en se lo"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F54",
+      "level": "A2",
+      "title": {
+        "es": "Posición de los pronombres",
+        "nl": "De plaats van voornaamwoorden"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F55",
+      "level": "A1",
+      "title": {
+        "es": "Pronombres tras preposición",
+        "nl": "Voornaamwoorden na een voorzetsel"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F56",
+      "level": "A1",
+      "title": {
+        "es": "Lugar y posición",
+        "nl": "Plaats en positie"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F57",
+      "level": "A1",
+      "title": {
+        "es": "Origen, destino, recorrido, ir y venir",
+        "nl": "Herkomst, bestemming, route, ir en venir"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F58",
+      "level": "A1",
+      "title": {
+        "es": "Tiempo y frecuencia",
+        "nl": "Tijd en frequentie"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F59",
+      "level": "A2",
+      "title": {
+        "es": "Hace, desde, desde hace, ya y todavía",
+        "nl": "Hace, desde, desde hace, ya en todavía"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F60",
+      "level": "A2",
+      "title": {
+        "es": "Por y para en usos básicos",
+        "nl": "Por en para in basisgebruik"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F61",
+      "level": "A1",
+      "title": {
+        "es": "Con, sin y de",
+        "nl": "Con, sin en de"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F62",
+      "level": "A1",
+      "title": {
+        "es": "Bien, mal, despacio, rápido y adverbios en mente",
+        "nl": "Bien, mal, despacio, rápido en bijwoorden op mente"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F63",
+      "level": "A1",
+      "title": {
+        "es": "Y, e, o, u, ni y pero",
+        "nl": "Y, e, o, u, ni en pero"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F64",
+      "level": "A1",
+      "title": {
+        "es": "Primero, luego, después y al final",
+        "nl": "Primero, luego, después en al final"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F65",
+      "level": "A1",
+      "title": {
+        "es": "Porque, por eso, entonces y para",
+        "nl": "Porque, por eso, entonces en para"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F66",
+      "level": "A1",
+      "title": {
+        "es": "Creo que, pienso que y sé que",
+        "nl": "Creo que, pienso que en sé que"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F67",
+      "level": "A2",
+      "title": {
+        "es": "Identificar con que",
+        "nl": "Identificeren met que"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F68",
+      "level": "A2",
+      "title": {
+        "es": "Cuando, desde que, antes y después de",
+        "nl": "Cuando, desde que, antes en después de"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F69",
+      "level": "A2",
+      "title": {
+        "es": "Condiciones posibles con si",
+        "nl": "Mogelijke voorwaarden met si"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "F70",
+      "level": "A1",
+      "title": {
+        "es": "También, tampoco, sí y no al responder",
+        "nl": "Ook, ook niet, wel en niet reageren"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "A01",
+      "level": "A2",
+      "title": {
+        "es": "Acento, tilde y sílaba tónica",
+        "nl": "Klemtoon, accentteken en lettergrepen"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "A02",
+      "level": "A1",
+      "title": {
+        "es": "Puntuación para preguntar y conectar",
+        "nl": "Leestekens bij vragen en verbindingen"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "A03",
+      "level": "B1",
+      "title": {
+        "es": "Glosario gramatical ES / NL",
+        "nl": "Grammaticale woordenlijst ES / NL"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B101",
+      "level": "B1",
+      "title": {
+        "es": "Pluscuamperfecto de indicativo",
+        "nl": "Voltooid verleden tijd"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B102",
+      "level": "B1",
+      "title": {
+        "es": "Futuro simple y conjetura",
+        "nl": "Futuro simple en vermoeden"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B103",
+      "level": "B1",
+      "title": {
+        "es": "Condicional simple y cortesía",
+        "nl": "Condicional simple en beleefdheid"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B104",
+      "level": "B1",
+      "title": {
+        "es": "Imperativo negativo y formas de tratamiento",
+        "nl": "Negatieve opdrachten en aanspreekvormen"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B105",
+      "level": "B1",
+      "title": {
+        "es": "Presente de subjuntivo, formas y función",
+        "nl": "Presente de subjuntivo, vorm en functie"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B106",
+      "level": "B1",
+      "title": {
+        "es": "Deseos, voluntad y cambio de sujeto",
+        "nl": "Wensen, wil en verandering van onderwerp"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B107",
+      "level": "B1",
+      "title": {
+        "es": "Emociones y valoraciones con subjuntivo",
+        "nl": "Emoties en beoordelingen met subjuntivo"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B108",
+      "level": "B1",
+      "title": {
+        "es": "Consejos, influencia y recomendaciones",
+        "nl": "Advies, invloed en aanbevelingen"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B109",
+      "level": "B1",
+      "title": {
+        "es": "Opinión, duda y grado de compromiso",
+        "nl": "Mening, twijfel en stelligheid"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B110",
+      "level": "B1",
+      "title": {
+        "es": "Cuando y otras referencias futuras",
+        "nl": "Cuando en toekomstige situaties"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B111",
+      "level": "B1",
+      "title": {
+        "es": "Finalidad con para y para que",
+        "nl": "Doel met para en para que"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B112",
+      "level": "B1",
+      "title": {
+        "es": "Relativas, referente conocido o buscado",
+        "nl": "Betrekkelijke zinnen bij bekende of gezochte personen"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B113",
+      "level": "B1",
+      "title": {
+        "es": "Se impersonal y pasiva refleja",
+        "nl": "Onpersoonlijk se en passief met se"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B114",
+      "level": "B1",
+      "title": {
+        "es": "Seguir, dejar de y llevar + gerundio",
+        "nl": "Doorgaan, stoppen en duur met gerundio"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B115",
+      "level": "B1",
+      "title": {
+        "es": "Lo neutro y sustantivación",
+        "nl": "Neutraal lo en zelfstandig gebruik"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B116",
+      "level": "B1",
+      "title": {
+        "es": "Preguntas indirectas",
+        "nl": "Indirecte vragen"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B117",
+      "level": "B1",
+      "title": {
+        "es": "Estilo indirecto, introducir voces ajenas",
+        "nl": "Indirecte rede, andermans woorden weergeven"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B118",
+      "level": "B1",
+      "title": {
+        "es": "Régimen verbal, queísmo y dequeísmo",
+        "nl": "Vaste voorzetsels, queísmo en dequeísmo"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B201",
+      "level": "B2",
+      "title": {
+        "es": "Imperfecto de subjuntivo",
+        "nl": "Imperfecto de subjuntivo"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B202",
+      "level": "B2",
+      "title": {
+        "es": "Perfecto de subjuntivo",
+        "nl": "Perfecto de subjuntivo"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B203",
+      "level": "B2",
+      "title": {
+        "es": "Pluscuamperfecto de subjuntivo",
+        "nl": "Pluscuamperfecto de subjuntivo"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B204",
+      "level": "B2",
+      "title": {
+        "es": "Condiciones posibles e hipotéticas",
+        "nl": "Mogelijke en hypothetische voorwaarden"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B205",
+      "level": "B2",
+      "title": {
+        "es": "Futuro perfecto y condicional compuesto",
+        "nl": "Futuro perfecto en condicional compuesto"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B206",
+      "level": "B2",
+      "title": {
+        "es": "Concordancia temporal del subjuntivo",
+        "nl": "Tijdsverband bij de subjuntivo"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B207",
+      "level": "B2",
+      "title": {
+        "es": "Estilo indirecto, tiempo, lugar y órdenes",
+        "nl": "Indirecte rede, tijd, plaats en opdrachten"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B208",
+      "level": "B2",
+      "title": {
+        "es": "Pasiva con ser y resultado con estar",
+        "nl": "Passief met ser en resultaat met estar"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B209",
+      "level": "B2",
+      "title": {
+        "es": "Los valores de se",
+        "nl": "De verschillende functies van se"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B210",
+      "level": "B2",
+      "title": {
+        "es": "Leísmo y variación de los pronombres",
+        "nl": "Leísmo en variatie van voornaamwoorden"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B211",
+      "level": "B2",
+      "title": {
+        "es": "Concesión con aunque",
+        "nl": "Toegeving met aunque"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B212",
+      "level": "B2",
+      "title": {
+        "es": "Condiciones con siempre que y a menos que",
+        "nl": "Voorwaarden met siempre que en a menos que"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B213",
+      "level": "B2",
+      "title": {
+        "es": "Causa, consecuencia y organización argumentativa",
+        "nl": "Oorzaak, gevolg en argumentatie"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B214",
+      "level": "B2",
+      "title": {
+        "es": "Relativos con preposición y cuyo",
+        "nl": "Betrekkelijke woorden met voorzetsel en cuyo"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "B215",
+      "level": "B2",
+      "title": {
+        "es": "Como si y comparaciones de grado",
+        "nl": "Como si en graadvergelijkingen"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "N009",
+      "level": "B1",
+      "title": {
+        "es": "Género y número: casos que necesitan contexto",
+        "nl": "Geslacht en getal: de context helpt"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "N010",
+      "level": "A1",
+      "title": {
+        "es": "Calendario, colores, familia y descripción",
+        "nl": "Kalender, kleuren, familie en beschrijving"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "N011",
+      "level": "B1",
+      "title": {
+        "es": "Sujeto, verbo y complementos: leer una oración",
+        "nl": "Onderwerp, werkwoord en aanvullingen"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "N012",
+      "level": "B1",
+      "title": {
+        "es": "Predicado nominal, atributo y predicativo",
+        "nl": "Naamwoordelijk gezegde en eigenschappen"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "N013",
+      "level": "B2",
+      "title": {
+        "es": "Régimen preposicional y complemento agente",
+        "nl": "Vaste voorzetsels en handelende persoon"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "N014",
+      "level": "B1",
+      "title": {
+        "es": "Coordinación y yuxtaposición",
+        "nl": "Nevenschikking en zinnen naast elkaar"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "N015",
+      "level": "B1",
+      "title": {
+        "es": "Subordinadas sustantivas: una idea dentro de otra",
+        "nl": "Een gedachte als deel van een zin"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "N016",
+      "level": "B2",
+      "title": {
+        "es": "Tiempo, causa, finalidad y concesión",
+        "nl": "Tijd, oorzaak, doel en toegeving"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "N017",
+      "level": "B2",
+      "title": {
+        "es": "Perífrasis: obligación, inicio, duración y cierre",
+        "nl": "Hulpconstructies: moeten, beginnen en doorgaan"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "N001",
+      "level": "A1",
+      "title": {
+        "es": "El alfabeto y cómo deletrear",
+        "nl": "Het alfabet en spellen"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "N002",
+      "level": "A1",
+      "title": {
+        "es": "Cinco vocales claras: español y neerlandés",
+        "nl": "Vijf heldere klinkers: Spaans en Nederlands"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "N003",
+      "level": "A2",
+      "title": {
+        "es": "Consonantes y variantes: seseo, distinción y yeísmo",
+        "nl": "Medeklinkers en variatie: seseo, onderscheid en yeísmo"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "N004",
+      "level": "A2",
+      "title": {
+        "es": "Ritmo, sílaba y entonación con sentido",
+        "nl": "Ritme, lettergrepen en intonatie met betekenis"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "N005",
+      "level": "B1",
+      "title": {
+        "es": "Sinalefa y palabras que se enlazan",
+        "nl": "Sinalefa en woorden die aan elkaar klinken"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "N006",
+      "level": "B1",
+      "title": {
+        "es": "Prefijos, sufijos y familias de palabras",
+        "nl": "Voorvoegsels, achtervoegsels en woordfamilies"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "N007",
+      "level": "B2",
+      "title": {
+        "es": "Composición: palabras que unen otras palabras",
+        "nl": "Samenstelling: woorden uit andere woorden"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "N008",
+      "level": "B2",
+      "title": {
+        "es": "Cambiar: ponerse, volverse, hacerse y quedarse",
+        "nl": "Veranderen: ponerse, volverse, hacerse en quedarse"
+      },
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    }
+  ],
+  "decks": [
+    {
+      "id": "v-rutina",
+      "level": "A1",
+      "cards": 10,
+      "interactivePilot": true,
+      "reviewStatus": "pilot-needs-human-review"
+    },
+    {
+      "id": "v-aula",
+      "level": "A1",
+      "cards": 10,
+      "interactivePilot": true,
+      "reviewStatus": "pilot-needs-human-review"
+    },
+    {
+      "id": "v-ciudad",
+      "level": "A2",
+      "cards": 10,
+      "interactivePilot": true,
+      "reviewStatus": "pilot-needs-human-review"
+    },
+    {
+      "id": "v-planes",
+      "level": "A2",
+      "cards": 10,
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "v-opiniones",
+      "level": "B1",
+      "cards": 10,
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "v-experiencias",
+      "level": "B1",
+      "cards": 10,
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "v-argumentacion",
+      "level": "B2",
+      "cards": 10,
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    },
+    {
+      "id": "v-docencia",
+      "level": "B2",
+      "cards": 10,
+      "interactivePilot": false,
+      "reviewStatus": "needs-visual-audit"
+    }
+  ]
+}
