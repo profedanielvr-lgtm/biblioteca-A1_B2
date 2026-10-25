@@ -39,7 +39,7 @@ function refresh(){if(!lastContext)return;const {main,lang}=lastContext;if(!main
  const lab=main.querySelector('#phon-listen');if(lab)lab.disabled=!voiceFor(phraseVariant||selected);const compareWord=main.querySelector('#phon-compare-word');if(compareWord)compareWord.dispatchEvent(new Event('change'));
 }
 function updateVoices(){voices=listVoices();if(!preferred){selected=voiceFor('es-ES')?'es-ES':'generic';}refresh();}
-function setModel(variant){if(!locales.includes(variant))return;stop(false);selected=preferred=variant;try{root.localStorage.setItem('biblio-phonetics-voice-v1',variant);}catch(_){}refresh();}
+function setModel(variant){if(!locales.includes(variant))return;stop(false);selected=preferred=variant;try{root.localStorage.setItem('biblio-phonetics-voice-v1',variant);}catch(_){}refresh();root.dispatchEvent?.(new Event('biblio:phon-model'));}
 function enhance(main,moduleId,lang){const m=root.BiblioPhonetics.get(moduleId),examples=m?D.byModule[m.id]:['cerveza','guitarra','lluvia'];if(!main.querySelector('h1'))return;
  const shell=document.createElement('section');shell.className='phon-audio-panel';shell.setAttribute('aria-label',tr(lang,'Audio y pronunciación','Audio en uitspraak'));shell.innerHTML='<label for="phon-model">'+tr(lang,'Modelo de pronunciación','Uitspraakmodel')+'</label><select id="phon-model">'+options(selected,lang)+'</select><button type="button" id="phon-stop">'+tr(lang,'Detener audio','Audio stoppen')+'</button><button type="button" id="phon-lab-jump">'+tr(lang,'Prueba tu propia frase','Probeer je eigen zin')+'</button><button type="button" id="phon-reload-voices">'+tr(lang,'Actualizar voces','Stemmen vernieuwen')+'</button><p id="phon-voice-info"></p><p class="phon-audio-status" id="phon-audio-status" role="status" aria-live="polite"></p>';
  const bar=main.querySelector('.material-actions');(bar||main.querySelector('h1')).after(shell);lastContext={main,lang,status:shell.querySelector('#phon-audio-status')};
@@ -63,6 +63,6 @@ function enhance(main,moduleId,lang){const m=root.BiblioPhonetics.get(moduleId),
 }
 const original=root.BiblioHub.render;root.BiblioHub.render=function(main,id,step,lang){stop(false);lastContext=null;const used=original(main,id,step,lang);if(used&&id==='fonetica')enhance(main,step,lang);return used;};
 voices=listVoices();selected=preferred||(voiceFor('es-ES')?'es-ES':'generic');root.speechSynthesis?.addEventListener?.('voiceschanged',updateVoices);root.addEventListener?.('pagehide',()=>stop(false));
-root.BiblioSpeech={token,text,speak,stop,voiceFor,recording,available,setModel,updateVoices,enhance,get selected(){return selected;},get voices(){return [...voices];}};
+root.BiblioSpeech={bindTokens,token,text,speak,stop,voiceFor,recording,available,setModel,updateVoices,enhance,get selected(){return selected;},get voices(){return [...voices];}};
 })(typeof window!=='undefined'?window:globalThis);
 
