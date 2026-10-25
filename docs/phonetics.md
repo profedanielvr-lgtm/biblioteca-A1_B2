@@ -1,0 +1,10 @@
+# Fonética del español y variación dialectal
+Sección bilingüe ES/NL con seis módulos independientes de las 123 fichas gramaticales existentes. No altera sus identificadores, prerrequisitos ni condiciones de avance.
+FON01 contiene las 27 letras, nombres recomendados, AFI amplio, ejemplos y articulación; FON02, grafías g/gu/gü y realizaciones [g, ɣ̞, x, h]; FON03, distinción, seseo y ceceo; FON04, yeísmo, zheísmo y sheísmo; FON05, dígrafos, vibrantes, grupos y vocales; FON06, intervención contrastiva para neerlandófonos.
+Los esquemas SVG son orientativos. El esquema de zonas de articulación no es una representación anatómica exacta. No se incorporan grabaciones dialectales ni se presenta una voz sintética como muestra regional. La sección ofrece transcripciones y comparación visual.
+Los 18 ítems comprueban reconocimiento y conocimientos. Se conservan como eventos scenario del perfil activo, con módulo, versión, respuestas, puntuación y ayuda. No son pruebas de pronunciación ni acreditación MCER y no incrementan los indicadores de producción independiente o recuerdo diferido. Los lectores sin perfil reciben feedback sin promesa de guardado.
+Las fichas pueden guardarse como favoritas y combinarse con gramática y vocabulario en colecciones. La exportación usa el flujo de impresión A4 existente y conserva logotipo, autoría, referencias y derechos; las soluciones de fonética aparecen solo cuando se activa la inclusión de soluciones.
+El nuevo recorrido admite restauración de lectura y enlaces directos. Las fuentes de consulta figuran en los datos y en cada ficha. Las explicaciones y actividades son originales; no se redistribuyen artículos ni grabaciones de terceros.
+Las pruebas cubren idiomas, contenidos, exploración sin puntuación, feedback sin perfil, persistencia y separación de perfiles, copias, favoritos, colecciones, PDF, rutas y edición autónoma.
+La revisión visual y la paginación real de impresión quedan pendientes: el entorno rechazó el lanzamiento del navegador de pruebas por su política de permisos.
+
