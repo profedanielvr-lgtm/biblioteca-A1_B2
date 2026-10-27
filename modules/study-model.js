@@ -1,0 +1,7 @@
+(function(root){'use strict';
+const DAY=86400000;
+function create(cards,saved=null,now=Date.now(),force=false){const ids=cards.map(c=>c.id),valid=new Set(ids),state={schema:1,queue:[],cards:{},round:0};if(saved?.schema===1){for(const [id,p]of Object.entries(saved.cards||{}))if(valid.has(id)&&p&&Number.isFinite(p.streak)&&Number.isFinite(p.due))state.cards[id]={streak:Math.max(0,Math.min(2,p.streak)),due:p.due};state.round=Number(saved.round)||0;}for(const id of ids)state.cards[id]||={streak:0,due:0};if(!force&&Array.isArray(saved?.queue))state.queue=[...new Set(saved.queue.filter(id=>valid.has(id)&&state.cards[id].streak<2))];for(const id of ids){const p=state.cards[id];if(force||p.due<=now){if(p.streak===2||force)p.streak=0;if(!state.queue.includes(id))state.queue.push(id);}}return state;}
+function rate(state,known,now=Date.now()){const id=state.queue.shift();if(!id)return null;const card=state.cards[id];card.streak=known?Math.min(2,card.streak+1):0;if(card.streak<2)state.queue.splice(Math.min(2,state.queue.length),0,id);else card.due=now+DAY;state.round++;return id;}
+function stats(state){return {remaining:state.queue.length,resolved:Object.values(state.cards).filter(c=>c.streak===2).length,total:Object.keys(state.cards).length};}
+root.BiblioStudyModel={create,rate,stats,DAY};if(typeof module!=='undefined')module.exports=root.BiblioStudyModel;
+})(typeof window!=='undefined'?window:globalThis);

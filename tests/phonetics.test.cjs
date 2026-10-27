@@ -4,7 +4,7 @@ test('phonetics exposes six complete bilingual modules and 27 recommended letter
  const e=environment(undefined,undefined,'#fonetica');const D=e.window.BiblioPhoneticsData;
  assert.equal(D.alphabet.length,27);assert.equal(new Set(D.alphabet.map(x=>x[0])).size,27);assert.equal(D.modules.length,6);assert.equal(e.window.GRAMMAR.cards.length,123);
  for(const m of D.modules){assert(m.title.es&&m.title.nl);assert(m.goal.es&&m.goal.nl);assert.equal(m.quiz.length,3);for(const s of m.sections){assert(s.title.es&&s.title.nl);for(const p of s.paragraphs)assert(p.es&&p.nl);for(const r of s.rows)assert.equal(r.length,s.headers.length);}for(const q of m.quiz){assert(q.feedback.es&&q.feedback.nl);assert(q.options[q.answer]);}for(const id of m.sources)assert(D.sources.some(s=>s.id===id&&s.url.startsWith('https://')));}
- assert(e.document.querySelector('a[href="#fonetica/FON06"]'));assert(e.document.querySelector('.primary-navigation a[href="#fonetica"]'));close(e);
+ assert(e.document.querySelector('a[href="#fonetica/FON06"]'));assert(e.document.querySelector('.primary-navigation a[href="#estudiar"][aria-current="page"]'));close(e);
 });
 test('all phonetics routes render in both languages; visual exploration does not record learner evidence',()=>{
  const e=environment(undefined,undefined,'#fonetica');e.window.BiblioJourney.store.enter('Ana','1234567');

@@ -1,1 +1,1 @@
-window.BIBLIO_BUILD = {"id":"2026.10.26-audio-feedback","builtAt":"2026-10-26T17:29:20+00:00"};
+window.BIBLIO_BUILD = {"id":"2026.10.27-study-navigation","builtAt":"2026-10-27T21:36:24+00:00"};
