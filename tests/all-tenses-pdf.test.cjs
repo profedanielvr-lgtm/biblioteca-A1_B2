@@ -52,7 +52,7 @@ test('produce un PDF verdadero y con páginas a partir de datos sin texto litera
  const {jsPDF}=require('jspdf');const summary=Report.current({code:'1234567',name:'Prueba',lessons:{},attempts:[],practice:[],learningEvents:[]});
  const document=Report.renderPdf(summary,'es',[],[],{},jsPDF);
  const bytes=Buffer.from(document.output('arraybuffer'));
- assert.equal(bytes.subarray(0,5).toString('%s','ascii'),'%PDF-');
+ assert.equal(bytes.subarray(0,5).toString('ascii'),'%PDF-');
  assert(bytes.length>1500);
 });
 test('el botón de descarga PDF está disponible al abrir Progreso',()=>{
