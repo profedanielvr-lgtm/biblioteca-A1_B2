@@ -51,7 +51,7 @@ function render(main,lang){
  function draw(){
   S.stop(false);attempt=0;done=false;usedHelp=false;
   const full=mode.value==='full',indices=full?v.eligible:[person],single=indices.length===1;
-  const personLabel=single?'<p>'+tr('Persona gramatical: ','Grammaticale persoon: ')+esc(V.persons[indices[0]])+'</p><p lang="es">'+esc(V.sentence(v,indices[0],true))+'</p>':'<p>'+tr('Completa las formas correspondientes.','Vul de bijbehorende vormen in.')+'</p>';
+  const personLabel=single?'<p>'+tr('Persona gramatical: ','Grammaticale persoon: ')+'<strong id="random-verb-current-person" data-person="'+indices[0]+'">'+esc(V.persons[indices[0]])+'</strong>'+'</p><p lang="es">'+esc(V.sentence(v,indices[0],true))+'</p>':'<p>'+tr('Completa las formas correspondientes.','Vul de bijbehorende vormen in.')+'</p>';
   const field=single?'<label for="random-verb-answer">'+tr('Tu respuesta','Je antwoord')+'</label><input id="random-verb-answer" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="80" required>':
    '<div class="random-verb-paradigm">'+indices.map(i=>'<label for="random-verb-form-'+i+'"><span>'+esc(V.persons[i])+'</span><input id="random-verb-form-'+i+'" data-person="'+i+'" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="80" required></label>').join('')+'</div>';
   const restricted=full&&indices.length<6?'<p class="meta">'+tr('Este verbo se practica aquí en los contextos habituales de tercera persona; no se presenta como paradigma completo de seis personas.','Dit werkwoord oefen je hier in gebruikelijke contexten met de derde persoon; dit zijn niet alle zes persoonsvormen.')+'</p>':'';
