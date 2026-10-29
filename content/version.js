@@ -1,1 +1,1 @@
-window.BIBLIO_BUILD = {"id":"2026.10.27-study-navigation","builtAt":"2026-10-27T21:36:24+00:00"};
+window.BIBLIO_BUILD = {"id":"2026.10.29-vocabulary-teacher-insights","builtAt":"2026-10-29T08:43:39+00:00"};
