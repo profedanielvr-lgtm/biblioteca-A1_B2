@@ -34,5 +34,12 @@ function render(rows,lang='es',cards=[]){
  '<p class="meta">'+tr('Solo aparecen preguntas o temas con al menos dos respuestas. Son señales para orientar el feedback, no diagnósticos de dominio.','Alleen vragen of onderwerpen met minimaal twee antwoorden. Dit zijn signalen voor feedback, geen bewijs van beheersing.')+'</p>'+
  (d.topics.length?table([tr('Tema o pregunta','Onderwerp of vraag'),tr('Respuestas','Antwoorden'),tr('Aciertos','Goed')],d.topics.map(topic)):'<p>'+tr('Aún no hay suficientes respuestas repetidas.','Nog niet genoeg herhaalde antwoorden.')+'</p>');
 }
-root.BiblioTeacherInsights={summarise,render};if(typeof module!=='undefined')module.exports=root.BiblioTeacherInsights;
+function csv(rows){
+ const data=summarise(rows),cell=value=>{let v=String(value??'');if(/^[=+@\-\t\r]/.test(v))v="'"+v;return '"'+v.replace(/"/g,'""')+'"';};
+ const lines=[['tipo','identificador','intentos','respuestas','aciertos','ultima_actividad']];
+ for(const [type,items] of [['clase',data.classes],['estudiante',data.students]])for(const x of items)lines.push([type,x.key,x.attempts,x.questions,x.correct,x.last]);
+ return '\uFEFF'+lines.map(x=>x.map(cell).join(',')).join('\r\n')+'\r\n';
+}
+function renderExport(rows,lang='es',cards=[]){return render(rows,lang,cards)+'<p class="meta">'+(lang==='nl'?'Een export bevat studentcodes. Bewaar en deel deze alleen volgens de afspraken van je opleiding.':'La exportación contiene códigos de estudiantes. Consérvala y compártela únicamente según los acuerdos de tu institución.')+'</p><button type="button" id="teacher-export-csv">'+(lang==='nl'?'Groepsoverzicht downloaden (CSV)':'Descargar resumen de clase (CSV)')+'</button>';}
+root.BiblioTeacherInsights={summarise,render:renderExport,csv};if(typeof module!=='undefined')module.exports=root.BiblioTeacherInsights;
 })(typeof window!=='undefined'?window:globalThis);
