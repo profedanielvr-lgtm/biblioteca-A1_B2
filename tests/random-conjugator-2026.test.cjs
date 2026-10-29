@@ -10,7 +10,7 @@ function setup(lang='es'){
 test('los cien verbos son filtrables por terminación y regularidad del presente',()=>{
  const e=setup(),V=e.window.BiblioVerbs,M=e.window.BiblioRandomVerbs;
  assert.equal(V.verbs.length,100);assert.equal(M.pool().length,100);
- assert.equal(M.isIrregular(V.get('hablar')),false);assert.equal(M.isIrregular(V.get('tener')),true);
+ assert.equal(M.isIrregular(V.get('hablar')),false);assert.equal(M.endingOf(V.get('oir')),'ir');assert(M.pool({ending:'ir'}).some(v=>v.id==='oir'));assert.equal(M.isIrregular(V.get('tener')),true);
  assert.equal(M.isIrregular(V.get('levantarse')),false);assert.equal(M.isIrregular(V.get('despertarse')),true);
  for(const [type,expect] of [['regular',false],['irregular',true]]){
   const matches=M.pool({type,ending:'ar'});
