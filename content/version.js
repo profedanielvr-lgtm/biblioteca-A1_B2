@@ -1,1 +1,1 @@
-window.BIBLIO_BUILD = {"id":"2026.10.29-tiempos-completos-pdf-progreso","builtAt":"2026-10-29T10:15:08+00:00"};
+window.BIBLIO_BUILD = {"id":"2026.10.29-tiempos-completos-pdf-progreso","builtAt":"2026-10-29T10:16:37+00:00"};
