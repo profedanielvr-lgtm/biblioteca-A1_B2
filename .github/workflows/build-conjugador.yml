@@ -1,0 +1,30 @@
+name: Actualizar distribución del conjugador
+on:
+  push:
+    branches:
+      - restaurar-conjugador-100-verbos-2026-10-29
+permissions:
+  contents: write
+jobs:
+  construir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+      - run: |
+          rm -f downloads/La-Biblioteca.zip
+          zip -q -j downloads/La-Biblioteca.zip La-Biblioteca.html
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html content/version.js content/catalog.js content/crosswalk.csv La-Biblioteca.html downloads/La-Biblioteca.zip
+          if ! git diff --cached --quiet; then
+            git commit -m "Distribuir corrección de oír en conjugador"
+            git push origin HEAD:restaurar-conjugador-100-verbos-2026-10-29
+          fi
