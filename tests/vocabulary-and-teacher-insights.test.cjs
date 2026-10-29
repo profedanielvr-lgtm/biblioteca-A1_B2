@@ -1,11 +1,11 @@
 const {test}=require('node:test'),assert=require('node:assert/strict');
 const Analytics=require('../modules/teacher-insights.js');
 const vocabulary=require('../content/vocabulary.js');
-require('../content/vocabulary-expanded.js');
+require('../content/vocabulary-expanded.js');require('../content/vocabulary-b2.js');
 
 test('los mazos añadidos conservan identificadores y ejemplos completos',()=>{
  const decks=vocabulary.decks,cards=decks.flatMap(x=>x.cards),ids=cards.map(x=>x.id);
- assert.equal(decks.length,20);assert.equal(cards.length,320);assert.equal(new Set(ids).size,cards.length);
+ assert.equal(decks.length,24);assert.equal(cards.length,400);assert.equal(new Set(ids).size,cards.length);
  for(const slug of ['comida-fuera','tiempo-atmosferico','aprendizaje','debate-critico']){
   const deck=decks.find(x=>x.id==='v-'+slug);assert.ok(deck);assert.equal(deck.cards.length,20);
  }
