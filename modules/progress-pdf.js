@@ -79,7 +79,7 @@ function renderPdf(status,lang='es',decks=[],cards=[],tenseTitles={},PdfClass){
  return pdf;
 }
 function download(profile,lang='es'){
- const data=current(profile),decks=root.BIBLIO_VOCABULARY?.decks||[],cards=root.GRAMMAR?.cards||[],tenseTitles=root.BIBLIO_PARADIGMS?.tenses?.reduce((a,t)=>{a[t.id]={es:t.name,nl:t.id};return a;},{})||{};
+ const data=current(profile),decks=root.BIBLIO_VOCABULARY?.decks||[],cards=root.GRAMMAR?.cards||[],tenseTitles=root.BIBLIO_PARADIGMS?.tenses?.reduce((a,t)=>{a[t.id]={es:root.BiblioRandomVerbs?.prettyTense(t.id,'es')||t.name,nl:root.BiblioRandomVerbs?.prettyTense(t.id,'nl')||t.id};return a;},{})||{};
  const pdf=renderPdf(data,lang,decks,cards,tenseTitles);
  pdf.save('la-biblioteca-progreso-'+data.code+'-'+data.generatedAt.slice(0,10)+'.pdf');
  return data;
