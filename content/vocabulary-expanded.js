@@ -198,25 +198,25 @@ hace calor|het is warm|En julio hace calor.|In juli is het warm.
 hace viento|het waait|Hoy hace mucho viento.|Vandaag waait het hard.
 llover|regenen|En otoño suele llover.|In de herfst regent het vaak.
 nevar|sneeuwen|En las montañas puede nevar.|In de bergen kan het sneeuwen.
-la lluvia|de regen|La lluvia empieza ahora.|Het begint nu te regenen.
+hace buen tiempo|het is mooi weer|Hoy hace buen tiempo.|Vandaag is het mooi weer.
 la nieve|de sneeuw|La nieve cubre la calle.|De sneeuw bedekt de straat.
 la nube|de wolk|Hay una nube grande.|Er is een grote wolk.
 el cielo|de lucht|El cielo está azul.|De lucht is blauw.
 el paraguas|de paraplu|Llevo un paraguas.|Ik heb een paraplu bij me.
 la temperatura|de temperatuur|La temperatura es baja.|De temperatuur is laag.
 el grado|de graad|Estamos a diez grados.|Het is tien graden.
-el pronóstico|de weersverwachting|Miro el pronóstico para mañana.|Ik bekijk de weersverwachting voor morgen.
+hace mal tiempo|het is slecht weer|Hoy hace mal tiempo.|Vandaag is het slecht weer.
 estar nublado|bewolkt zijn|Hoy está nublado.|Vandaag is het bewolkt.
 el tiempo|het weer|¿Qué tiempo hace hoy?|Wat voor weer is het vandaag?`],
 ['aprendizaje','B1','Estudiar y aprender','Studeren en leren','6.4',`
 la asignatura|het schoolvak|Mi asignatura favorita es español.|Mijn favoriete schoolvak is Spaans.
 la beca|de studiebeurs|Solicité una beca para estudiar.|Ik heb een studiebeurs aangevraagd.
 la matrícula|de inschrijving|La matrícula empieza en junio.|De inschrijving begint in juni.
-el plazo|de termijn|El plazo termina el viernes.|De termijn loopt vrijdag af.
+la fecha de entrega|de inleverdatum|La fecha de entrega figura en la tarea.|De inleverdatum staat bij de opdracht.
 entregar un trabajo|een opdracht inleveren|Tengo que entregar un trabajo mañana.|Ik moet morgen een opdracht inleveren.
 aprobar un examen|slagen voor een examen|Quiero aprobar el examen oral.|Ik wil slagen voor het mondelinge examen.
 suspender un examen|zakken voor een examen|No quiero suspender el examen.|Ik wil niet zakken voor het examen.
-la recuperación|de herkansing|Tengo una recuperación la semana que viene.|Ik heb volgende week een herkansing.
+el borrador|de conceptversie|Primero preparo un borrador del texto.|Eerst maak ik een conceptversie van de tekst.
 la calificación|het cijfer|Todavía no sé mi calificación.|Ik weet mijn cijfer nog niet.
 el criterio|het criterium|El profesor explica el criterio de evaluación.|De docent legt het beoordelingscriterium uit.
 el objetivo de aprendizaje|het leerdoel|Mi objetivo de aprendizaje es hablar con más fluidez.|Mijn leerdoel is vloeiender spreken.
@@ -227,19 +227,19 @@ repasar|herhalen|Repaso las palabras antes de la prueba.|Ik herhaal de woorden v
 la duda|de vraag|Tengo una duda sobre esta regla.|Ik heb een vraag over deze regel.
 la estrategia|de strategie|Pruebo otra estrategia de aprendizaje.|Ik probeer een andere leerstrategie.
 el avance|de vooruitgang|Noto un avance en mi expresión oral.|Ik merk vooruitgang in mijn spreekvaardigheid.
-la autoevaluación|de zelfevaluatie|Completo una autoevaluación después de la actividad.|Ik vul na de activiteit een zelfevaluatie in.
+la revisión por pares|de beoordeling door medestudenten|La revisión por pares me ayuda a detectar errores.|De beoordeling door medestudenten helpt me fouten te ontdekken.
 aprender de memoria|uit het hoofd leren|No basta con aprender las reglas de memoria.|Het is niet genoeg om de regels uit het hoofd te leren.`],
 ['debate-critico','B2','Argumentar y evaluar información','Argumenteren en informatie beoordelen','9.1',`
 el argumento|het argument|Su argumento se basa en dos ejemplos.|Zijn argument is gebaseerd op twee voorbeelden.
 la afirmación|de bewering|Debemos comprobar esa afirmación.|We moeten die bewering controleren.
 la hipótesis|de hypothese|La hipótesis necesita más pruebas.|De hypothese heeft meer bewijs nodig.
-la evidencia|het bewijsmateriaal|La evidencia disponible no es suficiente.|Het beschikbare bewijsmateriaal is niet voldoende.
+el indicio|de aanwijzing|La noticia contiene un indicio, pero no una prueba.|Het nieuwsbericht bevat een aanwijzing, maar nog geen bewijs.
 la fuente fiable|de betrouwbare bron|Busco una fuente fiable antes de citar.|Ik zoek een betrouwbare bron voordat ik citeer.
 la perspectiva|het perspectief|Analizamos el problema desde otra perspectiva.|We bekijken het probleem vanuit een ander perspectief.
-el sesgo|de vertekening|El estudio puede contener un sesgo.|Het onderzoek kan een vertekening bevatten.
+el prejuicio|het vooroordeel|Detectamos un prejuicio en el artículo.|We herkennen een vooroordeel in het artikel.
 la contradicción|de tegenstrijdigheid|Hay una contradicción entre las dos versiones.|Er is een tegenstrijdigheid tussen de twee versies.
-matizar|nuanceren|Conviene matizar esa conclusión.|Het is verstandig die conclusie te nuanceren.
-cuestionar|ter discussie stellen|Podemos cuestionar esa interpretación.|We kunnen die interpretatie ter discussie stellen.
+precisar|nauwkeuriger formuleren|Debemos precisar qué datos faltan.|We moeten nauwkeuriger formuleren welke gegevens ontbreken.
+poner en duda|in twijfel trekken|No pongo en duda tu experiencia.|Ik trek je ervaring niet in twijfel.
 fundamentar|onderbouwen|Hay que fundamentar la propuesta con datos.|We moeten het voorstel met gegevens onderbouwen.
 rebatir|weerleggen|Intentó rebatir el argumento con otro ejemplo.|Hij probeerde het argument met een ander voorbeeld te weerleggen.
 contrastar fuentes|bronnen vergelijken|Antes de publicar, contrastamos las fuentes.|Voor publicatie vergelijken we de bronnen.
