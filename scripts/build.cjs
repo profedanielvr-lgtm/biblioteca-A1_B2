@@ -1,8 +1,12 @@
 // Portable equivalent of build.py for environments without a Python runtime.
 const fs=require('node:fs'),path=require('node:path');
 const root=path.join(__dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8'),write=(p,s)=>fs.writeFileSync(path.join(root,p),s);
+// Data and PDF engine are generated offline, then bundled into the web and standalone files.
+require('./generate-verb-paradigms.cjs');
+const pdfBundle=fs.readFileSync(path.join(root,'node_modules/jspdf/dist/jspdf.umd.min.js'),'utf8');
+write('modules/vendor-jspdf.js','/*! jsPDF 4.2.1 · MIT license · Copyright (c) James Hall, yWorks GmbH; see docs/THIRD-PARTY-LICENSES.md */\n'+pdfBundle);
 const data=JSON.parse(read('content/catalog.json'));
-const version={id:'2026.10.29-conjugador-100-mejorado',builtAt:new Date().toISOString().replace(/\.\d{3}Z$/,'+00:00')};
+const version={id:'2026.10.29-tiempos-completos-pdf-progreso',builtAt:new Date().toISOString().replace(/\.\d{3}Z$/,'+00:00')};
 write('content/version.js','window.BIBLIO_BUILD = '+JSON.stringify(version)+';');
 write('content/catalog.js','window.GRAMMAR = '+JSON.stringify(data).replace(/<\/script/g,'<\\/script')+';');
 const csvCell=x=>/[",\r\n]/.test(String(x))?'"'+String(x).replace(/"/g,'""')+'"':String(x);
