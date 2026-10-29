@@ -5,8 +5,12 @@ on:
       - todos-tiempos-informe-pdf-2026-10-29
 permissions:
   contents: write
+concurrency:
+  group: preparacion-paradigmas-pdf
+  cancel-in-progress: true
 jobs:
   preparar:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
