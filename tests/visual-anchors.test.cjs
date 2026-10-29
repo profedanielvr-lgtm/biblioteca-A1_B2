@@ -14,7 +14,7 @@ test('grammar pilots change examples without changing learner evidence in either
   for(const id of ['F37','F50']){e.route(id+'/teoria');const box=e.document.querySelector('#teoria .visual-anchor');assert(box);assert.equal(box.querySelectorAll('[aria-pressed="true"]').length,1);box.querySelector('[data-anchor-state="1"]').click();assert.equal(box.querySelector('[data-anchor-state="1"]').getAttribute('aria-pressed'),'true');assert(box.querySelector('figcaption').textContent.includes(id==='F37'?'gustan':'trabajaba'));assert(box.querySelector('[aria-live="polite"]'));}
  }
  assert.equal(JSON.stringify(e.window.BiblioJourney.store.current().learningEvents||[]),before);
- const audit=resources.inventory(e.window.GRAMMAR,e.window.BIBLIO_VOCABULARY);assert.equal(audit.lessons.length,123);assert.equal(audit.decks.reduce((n,d)=>n+d.cards,0),240);
+ const audit=resources.inventory(e.window.GRAMMAR,e.window.BIBLIO_VOCABULARY);assert.equal(audit.lessons.length,123);assert.equal(audit.decks.reduce((n,d)=>n+d.cards,0),320);
  e.window.BiblioPlatform.records().close();
 });
 test('vocabulary previews keep existing decks and backups and submenu identifies current route',()=>{
