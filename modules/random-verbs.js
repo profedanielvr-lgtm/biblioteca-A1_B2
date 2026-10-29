@@ -146,5 +146,5 @@ function render(main,lang){
  initial.onchange=()=>{if(v&&mode.value==='single'){const eligible=available(v);person=initial.value!=='random'&&eligible.includes(Number(initial.value))?Number(initial.value):eligible[Math.floor(Math.random()*eligible.length)];draw();}};
  next();
 }
-root.BiblioRandomVerbs={choose,otherPerson,isIrregular,pool,endingOf,render};
+root.BiblioRandomVerbs={choose,otherPerson,isIrregular,pool,endingOf,prettyTense,render};
 })(typeof window!=='undefined'?window:globalThis);
