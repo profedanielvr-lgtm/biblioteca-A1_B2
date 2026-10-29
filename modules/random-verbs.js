@@ -2,14 +2,15 @@
 const V=root.BiblioVerbs,S=root.BiblioSpeech,esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'' :'&#39;'}[c]));
 const endings={ar:['o','as','a','amos','áis','an'],er:['o','es','e','emos','éis','en'],ir:['o','es','e','imos','ís','en']};
 const pronouns=['me','te','se','nos','os','se'];
+const endingOf=v=>{const base=v.infinitive.endsWith('se')?v.infinitive.slice(0,-2):v.infinitive;return base.slice(-2).normalize('NFD').replace(/[\u0300-\u036f]/g,'');};
 function regularForms(v){
  const reflexive=v.infinitive.endsWith('se'),base=reflexive?v.infinitive.slice(0,-2):v.infinitive;
- const ending=base.slice(-2),stem=base.slice(0,-2);
+ const ending=endingOf(v),stem=base.slice(0,-2);
  return endings[ending].map((suffix,i)=>(reflexive?pronouns[i]+' ':'')+stem+suffix);
 }
 function isIrregular(v){return v.present.some((form,i)=>V.normalize(form)!==V.normalize(regularForms(v)[i]));}
 function pool(filters={}){
- return V.verbs.filter(v=>(!filters.ending||v.infinitive.replace(/se$/,'').endsWith(filters.ending))&&(!filters.type||filters.type==='all'||(isIrregular(v)?'irregular':'regular')===filters.type));
+ return V.verbs.filter(v=>(!filters.ending||endingOf(v)===filters.ending)&&(!filters.type||filters.type==='all'||(isIrregular(v)?'irregular':'regular')===filters.type));
 }
 function choose(previous,random=Math.random,filters={}){
  const candidates=pool(filters).filter(v=>v.id!==previous);
@@ -58,7 +59,7 @@ function render(main,lang){
   const count=candidates().length;
   main.querySelector('#random-verb-filter-count').textContent=count+' / 100 '+tr('verbos en la selección','werkwoorden in de selectie');
   stage.innerHTML='<section class="study-card random-verb-card"><h2 lang="es">'+S.token(root.BiblioPhoneticsAudioData.wordId(v.infinitive),lang)+'</h2><p lang="nl">'+esc(v.nl)+'</p>'+
-   '<p class="meta">'+tr('Presente de indicativo','Tegenwoordige tijd')+' · '+tr(isIrregular(v)?'Irregular':'Regular',isIrregular(v)?'Onregelmatig':'Regelmatig')+' · '+esc(v.infinitive.replace(/se$/,'').slice(-2))+'</p>'+
+   '<p class="meta">'+tr('Presente de indicativo','Tegenwoordige tijd')+' · '+tr(isIrregular(v)?'Irregular':'Regular',isIrregular(v)?'Onregelmatig':'Regelmatig')+' · '+esc(endingOf(v))+'</p>'+
    personLabel+restricted+'<form id="random-verb-form">'+field+'<button type="submit">'+tr('Comprobar','Controleren')+'</button></form>'+
    '<p class="random-feedback" role="status" aria-live="polite"></p><div class="random-solution"></div>'+
    '<div class="random-verb-actions"><button type="button" id="random-verb-reveal">'+tr('Mostrar solución','Antwoord tonen')+'</button>'+
@@ -114,5 +115,5 @@ function render(main,lang){
  initial.onchange=()=>{if(v&&mode.value==='single'){person=initial.value!=='random'&&v.eligible.includes(Number(initial.value))?Number(initial.value):V.pick(v);draw();}};
  next();
 }
-root.BiblioRandomVerbs={choose,otherPerson,isIrregular,pool,render};
+root.BiblioRandomVerbs={choose,otherPerson,isIrregular,pool,endingOf,render};
 })(typeof window!=='undefined'?window:globalThis);
