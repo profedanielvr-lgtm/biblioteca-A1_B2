@@ -1,1 +1,1 @@
-window.BIBLIO_BUILD = {"id":"2026.10.29-vocabulary-teacher-insights","builtAt":"2026-10-29T08:50:02+00:00"};
+window.BIBLIO_BUILD = {"id":"2026.10.29-vocabulary-teacher-insights","builtAt":"2026-10-29T08:52:30+00:00"};
