@@ -25,7 +25,7 @@ test('el profesor recibe solo un resumen de intentos, con agregaciones correctas
  assert.equal(r.topics.length,1);assert.equal(r.topics[0].key,'F01');
  const html=Analytics.render(rows,'es',[{id:'F01',title:{es:'Repaso de verbos'}}]);
  assert.match(html,/Repaso de verbos/);assert.match(html,/Los códigos no verifican identidad/);
- assert.doesNotMatch(html,/fetch\(/);
+ assert.doesNotMatch(html,/fetch\(/);const csv=Analytics.csv(rows);assert.match(csv,/estudiante/);assert.match(csv,/clase/);assert.doesNotMatch(csv,/Wrong|Correct|Pregunta/);
 });
 test('no interpreta datos incompletos como intentos válidos ni inyecta HTML',()=>{
  const rows=[{studentCode:'<script>alert(1)</script>',classPin:'X',completedAt:'2026-10-28T10:00:00Z',items:[{question:'<img src=x onerror=alert(1)>',correct:false},{question:'<img src=x onerror=alert(1)>',correct:false}]}];
