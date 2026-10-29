@@ -55,7 +55,7 @@ test('puede elegir persona inicial y resolver todas las personas de un mismo ver
 test('la navegación queda disponible antes de responder y muestra el alcance limitado a presente',()=>{
  const e=setup('nl'),stage=e.document.querySelector('#random-verb-stage');
  assert(stage.querySelector('#random-verb-person'));assert(stage.querySelector('#random-verb-next'));
- assert(e.document.querySelector('#contenido').textContent.includes('Andere tijden zijn nog niet gevalideerd'));
+ assert(e.document.querySelector('#contenido').textContent.includes('Historische tijden zijn gemarkeerd als weinig gebruikt'));
  assert(e.document.querySelector('#random-verb-type'));assert(e.document.querySelector('#random-verb-ending'));
  stage.querySelector('#random-verb-reveal').click();
  assert(stage.querySelector('.random-feedback').textContent.includes('niet als zelfstandig antwoord'));
