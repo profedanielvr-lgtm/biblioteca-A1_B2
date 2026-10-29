@@ -1,0 +1,34 @@
+name: Compilar edición de conjugación
+on:
+  push:
+    branches:
+      - restaurar-conjugador-100-verbos-2026-10-29
+permissions:
+  contents: write
+jobs:
+  compilar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+      - name: Reconstruir ZIP autónomo
+        run: |
+          rm -f downloads/La-Biblioteca.zip
+          zip -q -j downloads/La-Biblioteca.zip La-Biblioteca.html
+      - name: Actualizar versión distribuida
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html La-Biblioteca.html downloads/La-Biblioteca.zip content/version.js content/catalog.js content/crosswalk.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "Distribuir conjugador corregido y actualizar caché"
+            git push origin HEAD:restaurar-conjugador-100-verbos-2026-10-29
+          fi
