@@ -1,1 +1,16 @@
 .study-page{max-width:64rem;margin:auto}.study-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr));gap:1rem;margin:1rem 0}.study-tile{padding:1.2rem;border:1px solid #d8d2dc;border-radius:10px;text-decoration:none;color:inherit;background:#fff}.study-tile h2{font-size:1.15rem;margin:.2rem 0}.study-tile:hover{border-color:#663366;background:#faf7fb}.study-filters,.study-actions{display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0}.study-filters label{flex:1;min-width:min(100%,14rem)}.study-filters input,.study-filters select{width:100%;min-height:44px}.study-card{border:1px solid #d8d2dc;border-radius:12px;padding:clamp(1rem,4vw,2rem);margin:1rem 0;background:#fff}.study-card h2{font-size:clamp(1.4rem,4vw,2rem)}.study-card button,.study-card input{min-height:44px}.study-card form{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap}.study-card input{max-width:100%;flex:1}.study-back{padding-top:1rem;border-top:1px solid #ddd;margin-top:1rem}.study-back[hidden]{display:none!important}.study-back h3{font-size:1.4rem}.study-page progress{width:100%;accent-color:#663366}.study-sources{margin-top:2rem}.study-sources summary{padding:.6rem 0;min-height:44px;cursor:pointer}.study-saving{font-size:.9rem;color:#555}.admin-links{display:flex;flex-wrap:wrap;gap:1rem;border-bottom:1px solid #ddd;padding:.8rem 0;margin-bottom:1rem}.primary-navigation{gap:.25rem}.sidebar-admin-link{display:block;margin:1rem 0;padding:.8rem;border-top:1px solid #ddd;color:inherit}.section-nav{flex-wrap:wrap}.study-card [aria-busy=true]{background:#f1e8f2}.study-card :focus-visible,.study-tile:focus-visible{outline:3px solid #663366;outline-offset:3px}@media(max-width:520px){.study-actions>*{flex:1 1 100%}.study-card form{display:block}.study-card form label{display:block}.study-card input{width:100%;margin:.5rem 0}.admin-links{gap:.7rem}.study-grid{grid-template-columns:1fr}}
+
+/* Conjugador de cien verbos: filtros compactos y acciones siempre visibles. */
+.random-verb-filters{margin-bottom:.75rem}
+.random-verb-filters label{flex:1 1 10rem}
+.random-verb-card{max-width:52rem}
+.random-verb-paradigm{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;width:100%;margin:.5rem 0 1rem}
+.random-verb-paradigm label{display:flex;flex-direction:column;gap:.3rem;min-width:0}
+.random-verb-paradigm input{width:100%;min-width:0;max-width:100%;box-sizing:border-box}
+.random-verb-actions{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.2rem;align-items:stretch}
+.random-verb-actions button{flex:1 1 12rem;white-space:normal;min-height:44px}
+.random-verb-actions button[disabled]{opacity:.55;cursor:not-allowed}
+.random-verb-card .random-feedback{min-height:1.5rem}
+.random-verb-card .random-solution{margin-top:.75rem}
+.random-verb-card .random-solution p{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+@media(max-width:620px){.random-verb-paradigm{grid-template-columns:1fr}.random-verb-actions button{flex-basis:100%}}
