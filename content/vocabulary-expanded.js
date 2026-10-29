@@ -162,5 +162,94 @@ la sorpresa|de verrassing|La fiesta es una sorpresa.|Het feest is een verrassing
 la paciencia|het geduld|Gracias por tu paciencia.|Bedankt voor je geduld.
 preocuparse|zich zorgen maken|Me preocupo por mi amigo.|Ik maak me zorgen om mijn vriend.
 llevarse bien|goed met elkaar kunnen opschieten|Nos llevamos bien.|We kunnen goed met elkaar opschieten.`]];
-for(const [slug,level,es,nl,section,text]of specs){const id='v-'+slug,reference={title:'Instituto Cervantes (2006). Plan curricular: nociones específicas, apartado '+section,url:level==='B1'?b1:a1};root.BIBLIO_VOCABULARY.decks.push({id,version:1,level,title:{es,nl},goal:{es:'Comprender y usar vocabulario en situaciones cotidianas.',nl:'Woorden in dagelijkse situaties begrijpen en gebruiken.'},topic:slug,source:'Selección y ejemplos originales de La biblioteca. Organización temática contrastada con el PCIC; niveles orientativos y traducciones contextuales propias, no oficiales.',references:[reference,{title:'RAE y ASALE. Diccionario de la lengua española',url:'https://dle.rae.es/'}],cards:text.trim().split('\n').map((line,i)=>{const [es,nl,exes,exnl]=line.split('|');return {id:id+'-'+(i+1),version:1,contextId:id+'-'+(i+1)+':example:1',senseId:id+'-'+(i+1)+':sense:1',term:{es,nl},example:{es:exes,nl:exnl},accepted:{es:[es],nl:[nl]},audio:{es:null,nl:null},sourceRefs:[reference],usage:{es:'Traducción para el sentido del ejemplo; otras acepciones pueden tener otra traducción.',nl:'Deze vertaling past bij de voorbeeldzin. Andere betekenissen kunnen een andere vertaling hebben.'}};})});}
+
+// Ampliación original de 80 tarjetas. La referencia indica el área temática, no
+// que cada palabra ni cada ejemplo estén certificados individualmente por el PCIC.
+specs.push(
+['comida-fuera','A1','Comer fuera','Uit eten gaan','5',`
+el restaurante|het restaurant|El restaurante abre a las ocho.|Het restaurant gaat om acht uur open.
+la cafetería|het café|Nos vemos en la cafetería.|We zien elkaar in het café.
+la mesa|de tafel|La mesa está junto a la ventana.|De tafel staat naast het raam.
+la carta|de menukaart|¿Nos trae la carta, por favor?|Kunt u ons de menukaart brengen?
+el camarero|de ober|El camarero viene enseguida.|De ober komt zo.
+la camarera|de serveerster|La camarera trae el agua.|De serveerster brengt het water.
+el plato|het gerecht|Este plato lleva arroz.|In dit gerecht zit rijst.
+la bebida|het drankje|¿Qué bebida quieres?|Welk drankje wil je?
+el agua sin gas|water zonder prik|Quiero agua sin gas.|Ik wil water zonder prik.
+el zumo de naranja|het sinaasappelsap|Tomo un zumo de naranja.|Ik drink een glas sinaasappelsap.
+el pan|het brood|¿Hay pan en la mesa?|Ligt er brood op tafel?
+el queso|de kaas|Me gusta el queso.|Ik houd van kaas.
+el arroz|de rijst|Comemos arroz con verduras.|We eten rijst met groenten.
+la ensalada|de salade|Pido una ensalada.|Ik bestel een salade.
+la sopa|de soep|La sopa está caliente.|De soep is warm.
+la cuenta|de rekening|La cuenta, por favor.|De rekening, alstublieft.
+pedir|bestellen|Voy a pedir una sopa.|Ik ga soep bestellen.
+tener hambre|honger hebben|Tengo hambre.|Ik heb honger.
+tener sed|dorst hebben|Tengo sed.|Ik heb dorst.
+¡Buen provecho!|Eet smakelijk!|¡Buen provecho a todos!|Eet smakelijk allemaal!`],
+['tiempo-atmosferico','A1','El tiempo y las estaciones','Het weer en de seizoenen','20.4',`
+la primavera|de lente|En primavera hay flores.|In de lente zijn er bloemen.
+el verano|de zomer|En verano hace calor.|In de zomer is het warm.
+el otoño|de herfst|En otoño llueve mucho.|In de herfst regent het veel.
+el invierno|de winter|En invierno hace frío.|In de winter is het koud.
+hace sol|het is zonnig|Hoy hace sol.|Vandaag is het zonnig.
+hace frío|het is koud|Por la mañana hace frío.|In de ochtend is het koud.
+hace calor|het is warm|En julio hace calor.|In juli is het warm.
+hace viento|het waait|Hoy hace mucho viento.|Vandaag waait het hard.
+llover|regenen|En otoño suele llover.|In de herfst regent het vaak.
+nevar|sneeuwen|En las montañas puede nevar.|In de bergen kan het sneeuwen.
+la lluvia|de regen|La lluvia empieza ahora.|Het begint nu te regenen.
+la nieve|de sneeuw|La nieve cubre la calle.|De sneeuw bedekt de straat.
+la nube|de wolk|Hay una nube grande.|Er is een grote wolk.
+el cielo|de lucht|El cielo está azul.|De lucht is blauw.
+el paraguas|de paraplu|Llevo un paraguas.|Ik heb een paraplu bij me.
+la temperatura|de temperatuur|La temperatura es baja.|De temperatuur is laag.
+el grado|de graad|Estamos a diez grados.|Het is tien graden.
+el pronóstico|de weersverwachting|Miro el pronóstico para mañana.|Ik bekijk de weersverwachting voor morgen.
+estar nublado|bewolkt zijn|Hoy está nublado.|Vandaag is het bewolkt.
+el tiempo|het weer|¿Qué tiempo hace hoy?|Wat voor weer is het vandaag?`],
+['aprendizaje','B1','Estudiar y aprender','Studeren en leren','6.4',`
+la asignatura|het schoolvak|Mi asignatura favorita es español.|Mijn favoriete schoolvak is Spaans.
+la beca|de studiebeurs|Solicité una beca para estudiar.|Ik heb een studiebeurs aangevraagd.
+la matrícula|de inschrijving|La matrícula empieza en junio.|De inschrijving begint in juni.
+el plazo|de termijn|El plazo termina el viernes.|De termijn loopt vrijdag af.
+entregar un trabajo|een opdracht inleveren|Tengo que entregar un trabajo mañana.|Ik moet morgen een opdracht inleveren.
+aprobar un examen|slagen voor een examen|Quiero aprobar el examen oral.|Ik wil slagen voor het mondelinge examen.
+suspender un examen|zakken voor een examen|No quiero suspender el examen.|Ik wil niet zakken voor het examen.
+la recuperación|de herkansing|Tengo una recuperación la semana que viene.|Ik heb volgende week een herkansing.
+la calificación|het cijfer|Todavía no sé mi calificación.|Ik weet mijn cijfer nog niet.
+el criterio|het criterium|El profesor explica el criterio de evaluación.|De docent legt het beoordelingscriterium uit.
+el objetivo de aprendizaje|het leerdoel|Mi objetivo de aprendizaje es hablar con más fluidez.|Mijn leerdoel is vloeiender spreken.
+la explicación|de uitleg|Necesito otra explicación.|Ik heb nog een uitleg nodig.
+el resumen|de samenvatting|Escribo un resumen del capítulo.|Ik schrijf een samenvatting van het hoofdstuk.
+tomar apuntes|aantekeningen maken|Tomo apuntes durante la clase.|Ik maak aantekeningen tijdens de les.
+repasar|herhalen|Repaso las palabras antes de la prueba.|Ik herhaal de woorden voor de toets.
+la duda|de vraag|Tengo una duda sobre esta regla.|Ik heb een vraag over deze regel.
+la estrategia|de strategie|Pruebo otra estrategia de aprendizaje.|Ik probeer een andere leerstrategie.
+el avance|de vooruitgang|Noto un avance en mi expresión oral.|Ik merk vooruitgang in mijn spreekvaardigheid.
+la autoevaluación|de zelfevaluatie|Completo una autoevaluación después de la actividad.|Ik vul na de activiteit een zelfevaluatie in.
+aprender de memoria|uit het hoofd leren|No basta con aprender las reglas de memoria.|Het is niet genoeg om de regels uit het hoofd te leren.`],
+['debate-critico','B2','Argumentar y evaluar información','Argumenteren en informatie beoordelen','9.1',`
+el argumento|het argument|Su argumento se basa en dos ejemplos.|Zijn argument is gebaseerd op twee voorbeelden.
+la afirmación|de bewering|Debemos comprobar esa afirmación.|We moeten die bewering controleren.
+la hipótesis|de hypothese|La hipótesis necesita más pruebas.|De hypothese heeft meer bewijs nodig.
+la evidencia|het bewijsmateriaal|La evidencia disponible no es suficiente.|Het beschikbare bewijsmateriaal is niet voldoende.
+la fuente fiable|de betrouwbare bron|Busco una fuente fiable antes de citar.|Ik zoek een betrouwbare bron voordat ik citeer.
+la perspectiva|het perspectief|Analizamos el problema desde otra perspectiva.|We bekijken het probleem vanuit een ander perspectief.
+el sesgo|de vertekening|El estudio puede contener un sesgo.|Het onderzoek kan een vertekening bevatten.
+la contradicción|de tegenstrijdigheid|Hay una contradicción entre las dos versiones.|Er is een tegenstrijdigheid tussen de twee versies.
+matizar|nuanceren|Conviene matizar esa conclusión.|Het is verstandig die conclusie te nuanceren.
+cuestionar|ter discussie stellen|Podemos cuestionar esa interpretación.|We kunnen die interpretatie ter discussie stellen.
+fundamentar|onderbouwen|Hay que fundamentar la propuesta con datos.|We moeten het voorstel met gegevens onderbouwen.
+rebatir|weerleggen|Intentó rebatir el argumento con otro ejemplo.|Hij probeerde het argument met een ander voorbeeld te weerleggen.
+contrastar fuentes|bronnen vergelijken|Antes de publicar, contrastamos las fuentes.|Voor publicatie vergelijken we de bronnen.
+llegar a una conclusión|tot een conclusie komen|Tras el debate llegamos a una conclusión.|Na het debat komen we tot een conclusie.
+por una parte|enerzijds|Por una parte, el plan ahorra tiempo.|Enerzijds bespaart het plan tijd.
+por otra parte|anderzijds|Por otra parte, requiere más recursos.|Anderzijds zijn er meer middelen voor nodig.
+no obstante|desondanks|La propuesta es cara; no obstante, resulta viable.|Het voorstel is duur, maar desondanks uitvoerbaar.
+aun así|toch|Aun así, debemos escuchar otras opiniones.|Toch moeten we naar andere meningen luisteren.
+en cierta medida|tot op zekere hoogte|Estoy de acuerdo en cierta medida.|Ik ben het er tot op zekere hoogte mee eens.
+a grandes rasgos|in grote lijnen|A grandes rasgos, compartimos el diagnóstico.|In grote lijnen delen we de analyse.`]
+);
+for(const [slug,level,es,nl,section,text]of specs){const id='v-'+slug,reference={title:'Instituto Cervantes (2006). Plan curricular: nociones específicas, apartado '+section,url:['B1','B2'].includes(level)?b1:a1};root.BIBLIO_VOCABULARY.decks.push({id,version:1,level,title:{es,nl},goal:{es:'Comprender y usar vocabulario en situaciones cotidianas.',nl:'Woorden in dagelijkse situaties begrijpen en gebruiken.'},topic:slug,source:'Selección y ejemplos originales de La biblioteca. Organización temática contrastada con el PCIC; niveles orientativos y traducciones contextuales propias, no oficiales.',references:[reference,{title:'RAE y ASALE. Diccionario de la lengua española',url:'https://dle.rae.es/'}],cards:text.trim().split('\n').map((line,i)=>{const [es,nl,exes,exnl]=line.split('|');return {id:id+'-'+(i+1),version:1,contextId:id+'-'+(i+1)+':example:1',senseId:id+'-'+(i+1)+':sense:1',term:{es,nl},example:{es:exes,nl:exnl},accepted:{es:[es],nl:[nl]},audio:{es:null,nl:null},sourceRefs:[reference],usage:{es:'Traducción para el sentido del ejemplo; otras acepciones pueden tener otra traducción.',nl:'Deze vertaling past bij de voorbeeldzin. Andere betekenissen kunnen een andere vertaling hebben.'}};})});}
 })(typeof window!=='undefined'?window:globalThis);
