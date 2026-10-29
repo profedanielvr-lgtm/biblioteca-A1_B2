@@ -21,6 +21,7 @@ jobs:
       - run: npm run build
       - name: Actualizar el ZIP descargable
         run: |
+          rm -f downloads/La-Biblioteca.zip
           zip -q -j downloads/La-Biblioteca.zip La-Biblioteca.html
       - name: Guardar archivos compilados en la rama de la propuesta
         run: |
