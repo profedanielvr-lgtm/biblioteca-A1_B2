@@ -1,1 +1,1 @@
-window.BIBLIO_BUILD = {"id":"2026.10.29-b2-learning-reports","builtAt":"2026-10-29T09:09:58+00:00"};
+window.BIBLIO_BUILD = {"id":"2026.10.29-conjugador-100-mejorado","builtAt":"2026-10-29T09:55:00+00:00"};
