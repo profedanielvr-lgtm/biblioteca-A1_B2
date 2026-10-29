@@ -14,7 +14,9 @@
     "audit:audio": "node scripts/audit-audio.cjs"
   },
   "devDependencies": {
-    "linkedom": "0.18.13",
-    "fake-indexeddb": "6.2.5"
+    "@jirimracek/conjugate-esp": "2.3.6",
+    "fake-indexeddb": "6.2.5",
+    "jspdf": "4.2.1",
+    "linkedom": "0.18.13"
   }
 }

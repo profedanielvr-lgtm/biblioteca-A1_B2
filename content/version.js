@@ -1,1 +1,1 @@
-window.BIBLIO_BUILD = {"id":"2026.10.29-conjugador-100-mejorado","builtAt":"2026-10-29T09:58:19+00:00"};
+window.BIBLIO_BUILD = {"id":"2026.10.29-tiempos-completos-pdf-progreso","builtAt":"2026-10-29T10:18:25+00:00"};
