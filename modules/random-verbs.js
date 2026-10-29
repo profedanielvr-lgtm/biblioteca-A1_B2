@@ -66,9 +66,9 @@ function render(main,lang){
  S.mount(main,lang);
  const stage=main.querySelector('#random-verb-stage'),tense=main.querySelector('#random-verb-tense'),type=main.querySelector('#random-verb-type'),ending=main.querySelector('#random-verb-ending'),mode=main.querySelector('#random-verb-mode'),initial=main.querySelector('#random-verb-person-select');
  const options=()=>({type:type.value,ending:ending.value});
- const candidates=()=>pool(options());
  const formsFor=verb=>paradigms.verbs[verb.infinitive]?.tenses[tense.value]||[];
- const available=verb=>verb.eligible.filter(i=>typeof formsFor(verb)[i]==='string'&&formsFor(verb)[i].trim()!=='');
+ const available=verb=>formsFor(verb).map((form,i)=>typeof form==='string'&&form.trim()?i:null).filter(i=>i!==null).filter(i=>tense.value!=='indicativo-presente'||verb.eligible.includes(i));
+ const candidates=()=>pool(options()).filter(v=>available(v).length);
  function save(response,correct,index,full){
   if(!root.BiblioJourney?.store.current())return;
   try{root.BiblioEvidence.add('scenario',{key:'random-conjugation:'+v.id+':'+index,verb:v.id,person:index,tense:tense.value,response,correct,attempt,help:usedHelp||attempt>1,modality:'production',source:'conjugador-aleatorio',full:!!full});}
@@ -130,18 +130,18 @@ function render(main,lang){
   };
  }
  function next(){
-  const chosen=choose(v?.id,Math.random,options());if(!chosen){
+  const choices=candidates().filter(candidate=>candidate.id!==v?.id),chosen=choices[Math.floor(Math.random()*choices.length)];if(!chosen){
    stage.innerHTML='<section class="study-card"><p role="status">'+tr('No hay otro verbo para estos filtros. Prueba una selección más amplia.','Geen ander werkwoord met deze filters. Kies ruimere filters.')+'</p></section>';
    return;
   }
   v=chosen;
   const selected=Number(initial.value);
-  const eligible=available(v);person=initial.value!=='random'&&eligible.includes(selected)?selected:eligible.includes(V.pick(v))?V.pick(v):eligible[Math.floor(Math.random()*eligible.length)];
+  const eligible=available(v),picked=V.pick(v);person=initial.value!=='random'&&eligible.includes(selected)?selected:eligible.includes(picked)?picked:eligible[Math.floor(Math.random()*eligible.length)];
   draw();
  }
  type.onchange=()=>{v=null;next();};
  ending.onchange=()=>{v=null;next();};
- tense.onchange=()=>{if(v){const eligible=available(v);if(!eligible.includes(person))person=eligible[0];draw();}};
+ tense.onchange=()=>{if(v){const eligible=available(v);if(!eligible.length){v=null;next();return;}if(!eligible.includes(person))person=eligible[0];draw();}};
  mode.onchange=()=>{if(v)draw();};
  initial.onchange=()=>{if(v&&mode.value==='single'){const eligible=available(v);person=initial.value!=='random'&&eligible.includes(Number(initial.value))?Number(initial.value):eligible[Math.floor(Math.random()*eligible.length)];draw();}};
  next();
