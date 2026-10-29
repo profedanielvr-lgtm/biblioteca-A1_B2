@@ -67,8 +67,9 @@ test('los filtros de interfaz seleccionan únicamente verbos del grupo pedido',(
  const e=setup(),V=e.window.BiblioVerbs,M=e.window.BiblioRandomVerbs;
  const end=e.document.querySelector('#random-verb-ending'),type=e.document.querySelector('#random-verb-type'),name=()=>e.document.querySelector('#random-verb-stage h2 span[lang=es]').textContent;
  end.value='ir';end.onchange();type.value='irregular';type.onchange();
- assert(V.get(name()).infinitive.replace(/se$/,'').endsWith('ir'));
- assert(M.isIrregular(V.get(name())));
+ const selected=V.verbs.find(v=>v.infinitive===name());assert(selected);
+ assert(M.endingOf(selected)==='ir');
+ assert(M.isIrregular(selected));
  assert.match(e.document.querySelector('#random-verb-filter-count').textContent,/\/ 100/);
  const previous=name(),stage=e.document.querySelector('#random-verb-stage');
  stage.querySelector('#random-verb-next').click();assert.notEqual(name(),previous);
